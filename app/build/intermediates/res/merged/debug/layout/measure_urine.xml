@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp" >
+
+        <TextView
+            android:id="@+id/connect_status"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="200dp"
+            android:layout_marginTop="70dp"
+            android:text="@string/unconnect"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="100dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="300dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="480dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/healthmeasure" />
+
+            <TextView
+                android:id="@+id/test_xuetang_user"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#fffdfdfd"
+                android:textSize="24px" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/topbar"
+        android:layout_margin="5dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="1000dp"
+            android:layout_height="510dp"
+            android:layout_gravity="center"
+            android:background="@drawable/sbackground1"
+            android:orientation="vertical"
+            android:padding="40dp" >
+
+            <TableLayout
+                android:layout_width="850dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp" >
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/urine_status_image1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/light_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="白细胞(leu)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/leu"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="亚硝酸盐(nit)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/nit"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="尿胆原(ubg)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/ubg"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="蛋白质(pro)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/pro"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/urine_status_image2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/light_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="pH值(ph)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/pH"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="潜血(bld)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/bld"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="酮体(ket)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/ket"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="胆红素(bil)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/bil"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+                </TableRow>
+
+                <TableRow>
+
+                    <ImageView
+                        android:id="@+id/urine_status_image3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/light_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="血糖(glu)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/glu"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="维生素C(vc)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/vc"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:text="比重(sg)"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/sg"
+                        android:layout_width="80dp"
+                        android:layout_height="40dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+                </TableRow>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="200dp"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="right"
+                        android:text="测量时间:"
+                        android:textColor="#ff444444"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/measure_time"
+                        android:layout_width="235dp"
+                        android:layout_height="70dp"
+                        android:clickable="false"
+                        android:cursorVisible="false"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:hint=""
+                        android:textColor="@color/datacolor"
+                        android:textSize="15sp" />
+                </LinearLayout>
+            </TableLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="@string/uri_help"
+                android:textColor="#0072fe"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/cont_bg03"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp" >
+
+        <Button
+            android:id="@+id/get_data_button"
+            android:layout_width="250dp"
+            android:layout_height="70dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/main_menu"
+            android:drawableLeft="@drawable/startmeasure"
+            android:text="获取数据"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/find_device"
+            android:background="@drawable/main_menu"
+            android:drawableLeft="@drawable/startmeasure"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="测量结束"
+            android:textColor="@color/color_main_menu"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/find_device"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/main_menu"
+            android:drawableLeft="@drawable/startmeasure"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="查找设备"
+            android:textColor="@color/color_main_menu"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

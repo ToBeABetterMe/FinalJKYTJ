@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_header"
+    android:layout_width="match_parent"
+    android:layout_height="48dip"
+    android:background="@color/blue_light">
+    <TextView
+        android:id="@+id/textHeadTitle"
+        style="@style/main_head_title"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        android:ellipsize="marquee"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:maxWidth="180dp"
+        android:singleLine="true"
+        android:text="健康档案"
+        android:textColor="@color/text_color_white"
+        android:textSize="@dimen/text_size_20" />
+
+    <!-- 健康档案上传按钮 -->
+    <Button
+        android:id="@+id/btn_jkda_upload"
+        style="@style/title_base_button"
+        android:background="@drawable/jkda_upload_btn"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="@dimen/space_10"/>
+    <!-- 健康体检上传按钮 -->
+    <Button
+        android:id="@+id/btn_jktj_upload"
+        style="@style/title_base_button"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/jktj_upload_btn"
+        android:layout_marginRight="@dimen/space_10"
+        android:visibility="gone"/>
+    <!-- 健康测量自动获取按钮 -->
+    <Button
+        android:id="@+id/btn_jkcl_auto"
+        style="@style/title_base_button"
+        android:layout_alignParentRight="true"
+        android:background="@drawable/test_devicebtn"
+        android:layout_marginRight="@dimen/space_10"
+        android:visibility="gone"/>
+
+    <!-- 健康档案编辑按钮 -->
+    <Button
+        android:id="@+id/btn_jkda_edit"
+        style="@style/title_base_button"
+        android:background="@drawable/jkda_edit_btn"
+        android:layout_marginRight="@dimen/space_5"
+        android:layout_toLeftOf="@id/btn_jkda_upload"/>
+    <!-- 健康体检新建按钮 -->
+    <Button
+        android:id="@+id/btn_jktj_creat"
+        style="@style/title_base_button"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_toLeftOf="@id/btn_jktj_upload"
+        android:visibility="gone"/>
+    <!-- 健康测量手动按钮 -->
+    <Button
+        android:id="@+id/btn_jkcl_manual"
+        style="@style/title_base_button"
+        android:background="@drawable/test_handinputbtn"
+        android:layout_marginRight="@dimen/space_10"
+        android:layout_toLeftOf="@id/btn_jkcl_auto"
+        android:visibility="gone"/>
+
+</RelativeLayout>

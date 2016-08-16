@@ -1,0 +1,262 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.c102c.finalJKYTJ"
+    android:versionCode="17"
+    android:versionName="3.0.0" >
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <uses-sdk
+        android:minSdkVersion="17"
+        android:targetSdkVersion="21" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/background_app"
+        android:label="@string/app_name"
+        android:theme="@android:style/Theme.NoTitleBar" >
+        <activity
+            android:name="com.c102c.app.activity.InitalActivity"
+            android:screenOrientation="landscape" >
+
+        </activity>
+        <activity android:name="com.c102c.app.activity.TestActivity" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.health_record_activity.YWGLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.mbgy_activity.MBGYActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.ReadIDCardActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.health_record_activity.UsersListActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="stateHidden" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.health_record_activity.JKTJActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.mbgy_activity.GXYZXDAActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.mbgy_activity.GXYSFJLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.mbgy_activity.TNBZXDAActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.mbgy_activity.TNBSFJLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.health_record_activity.UserDetailActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.Gxyda"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.health_record_activity.JKDAActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <!-- 主界面 -->
+        <activity
+            android:name="com.c102c.app.activity.MainActivity"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.JKGLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+
+        <activity
+            android:name="com.c102c.app.ggws_activity.GGWS_Activity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.ETBJActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.ETZXDAActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.JieZhenTableActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.ZhuanZhenActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.UserSelectActivity"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan">
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFZXDA_downloadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.ETempActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFCH42FSJL_uploadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.XSEJTFSJL_uploadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.MeasureOnPC300Activity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.MeasureUrineActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.MeasureWeilionECG"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.bluetooth.BluetoothListActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.system_activity.DoctorActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.system_activity.LoginActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.system_activity.SystemActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFCHFSJL_uploadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFCJJL_uploadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.ggws_activity.YCFFJJL_uploadActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.MZYLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.JKCLActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.activity.LocalRecordActivity"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.health.measurement.MeasureWbc"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.DoctorMark"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.FangWuAndBuildings"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.OtherThingsList"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.WuPing"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.RenYuanGuanLi"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.WSSBZDJ"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.resource_mangage.XQJBQK"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.staff_training.Staff_Training"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.staff_training.DocTool"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.staff_training.Wroking_training"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.staff_training.QXPX"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.administrative_manager.Administrative_manager"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.administrative_manager.Administrative_notification"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.administrative_manager.Performance_appraisal"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.administrative_manager.GZLKH"
+            android:screenOrientation="landscape" >
+        </activity>
+        <activity
+            android:name="com.c102c.app.administrative_manager.Task_notification"
+            android:screenOrientation="landscape" >
+        </activity>
+    </application>
+
+</manifest>

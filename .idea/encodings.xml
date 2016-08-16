@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/app/src/main/java/cn/blunce/app/updateutils/UpdateManager.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/activity/BaseActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/activity/MainActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/activity/NewInitalActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/health_record_activity/JKDAActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/health_record_activity/UsersListActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/health_record_activity/YWGLActivity.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/ui/contact/CharacterParser.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/ui/contact/ClearEditText.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/c102c/app/ui/contact/SideBar.java" charset="GBK" />
+    <file url="file://$PROJECT_DIR$/app/src/main/java/com/health/measurement/ReadIDCardActivity.java" charset="GBK" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>

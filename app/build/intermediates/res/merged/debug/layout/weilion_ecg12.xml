@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/mbackground"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="110dp"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/healthmeasure"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/connect_status"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="40dp"
+            android:text="@string/unconnect"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+
+        <LinearLayout
+            android:id="@+id/ll_gain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="增益值："
+                android:textSize="14px" />
+
+            <Spinner
+                android:id="@+id/sp_gain"
+                android:layout_width="135dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_xinlv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@id/connect_status"
+            android:orientation="horizontal" >
+
+            <ImageView
+                android:id="@+id/xinlv_image"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/light_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="心率(bpm)："
+                android:textSize="14px" />
+
+            <EditText
+                android:id="@+id/et_xinlv"
+                android:layout_width="100dp"
+                android:layout_height="50dp"
+                android:focusable="false"
+                android:inputType="textNoSuggestions" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="(bpm)"
+                android:textSize="12px" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_sudu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/ll_gain"
+            android:orientation="horizontal" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="走速值："
+                android:textSize="14px" />
+
+            <Spinner
+                android:id="@+id/sp_sudu"
+                android:layout_width="120dp"
+                android:layout_height="50dp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <SurfaceView
+        android:id="@+id/sfv"
+        android:layout_width="fill_parent"
+        android:layout_height="550px" >
+    </SurfaceView>
+
+    <RelativeLayout
+        android:id="@+id/botton_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cont_bg03"
+        android:padding="2dp" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/cont_bg03"
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/start_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="开始心电"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/analysis_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="分析数据"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/upload_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:enabled="false"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="测量结束"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/find_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="查找设备"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</LinearLayout>

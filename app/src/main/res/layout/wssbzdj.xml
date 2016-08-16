@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/white" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="村卫生室补助收入登记"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_add_qyyh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/rl_title"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:text="新增记录"
+        android:textSize="24sp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="800dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/sbackground1"
+        android:orientation="vertical"
+        android:paddingLeft="55dp" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFC0CB" >
+
+            <TextView
+                android:id="@+id/tv_grxm"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="序号"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_grxb"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="村医专项补助金额"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_grnl"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="基本公共卫生补助及金额"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_qysj"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="一般诊疗费补助金额"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_jtzz"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="基本药物补助金额"
+                android:textSize="24sp" />
+
+            <TextView
+                android:id="@+id/tv_fwnr"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:gravity="center"
+                android:text="补助发放时间"
+                android:textSize="24sp" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/lv_qyfwlist"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:dividerHeight="3dp" >
+        </ListView>
+    </LinearLayout>
+
+</RelativeLayout>

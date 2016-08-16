@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_ywgl" >
+
+    <LinearLayout
+        android:layout_width="1000dp"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="150dp"
+        android:orientation="horizontal"
+        android:padding="0dp" >
+
+        <Button
+            android:id="@+id/ywgl_btn_userlist"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:background="@drawable/yhlb_btn"
+            android:onClick="jumpTo" />
+
+        <Button
+            android:id="@+id/btn_ggws"
+            android:layout_width="0dp"
+            android:layout_marginLeft="80dp"
+            android:layout_weight="1"
+            android:layout_height="100dp"
+            android:background="@drawable/ggws_btn"
+            android:onClick="jumpTo" />
+    </LinearLayout>
+
+</RelativeLayout>

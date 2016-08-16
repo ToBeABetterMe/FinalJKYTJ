@@ -1,0 +1,386 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="高血压专项档案"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@id/btn_save_jktj"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1.0"
+            android:gravity="center"
+            android:text="新建专项档案"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/btn_new_hy"
+            android:layout_width="200dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:background="@drawable/mbgl_add_record_btn"
+            android:gravity="center"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@id/tv_grxm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="80.0dip"
+        android:text="个人姓名"
+        android:textColor="@color/text_color_black"
+        android:textSize="24.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_name"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_tnbzsbh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="糖尿病专属编号："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_specialNo"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jddwdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建档单位代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_registerOrgCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jdrxm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建档人姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_registerDoctorName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_qzdwdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确诊单位代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_diagnoseOrgCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_qzysxm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确诊医生姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_diagnoseDoctorName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_szy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="舒张压："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@id/HypertensionSpecial_et_DBP"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_xcsfrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下次随访日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_nextFlupDate"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:textColor="@color/text_color_black" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jmgrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居民个人ID："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_personId"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jdrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建档日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_registerDate"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jdrdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建档人代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_registerDoctorCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_qzrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确诊日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_diagnoseDate"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_qzysdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="确诊医生代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_diagnoseDoctorCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_ssy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="收缩压："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_SBP"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@id/tv_jgdm01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="血压分级："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@id/HypertensionSpecial_et_bloodPressureLevel"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="120dp"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/healthmeasure" />
+
+        <TextView
+            android:id="@+id/connect_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="49dp"
+            android:text="未连接"
+            android:textColor="#FFFFFFFF"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/bottombar"
+        android:layout_below="@+id/topbar"
+        android:orientation="vertical" >
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="800dp"
+        android:layout_height="500dp"
+        android:layout_below="@id/topbar"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/sbackground1"
+        android:gravity="center_horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/layout_wbc1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            android:padding="10dp" >
+
+            <LinearLayout
+                android:id="@+id/layout_wbc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="20dp" >
+
+                <ImageView
+                    android:id="@+id/hp_image"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:src="@drawable/light_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="额温（℃）:"
+                    android:textColor="#000000" />
+
+                <EditText
+                    android:id="@+id/e_tmp"
+                    android:layout_width="100dp"
+                    android:layout_height="50dp"
+                    android:layout_margin="10dp"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:focusableInTouchMode="false"
+                    android:gravity="center" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20px"
+                    android:gravity="center_vertical"
+                    android:text="参考范围：35.5 ℃ ~37.8 ℃"
+                    android:textColor="@color/duckgrey"
+                    android:textSize="@dimen/text_size_2" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@id/layout_wbc1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginRight="100dp"
+            android:layout_marginTop="50dp"
+            android:text="说明：\n1、爱立康可测量人体额温。\n2、右上角显示与设备的连接状态。如果处于未连接状态，可按查找设备，选择设备连接。\n3、测试完后，按上传数据即可上传（只上传有测量数据的项）。\n4、上传后，蓝色按钮变绿表示上传成功，红色表示上传失败，不变色表示没有上传数据。"
+            android:textColor="#0072fe"
+            android:textSize="@dimen/text_size_2" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cont_bg03"
+        android:gravity="center_vertical"
+        android:scrollbars="none" >
+
+        <Button
+            android:id="@+id/upload_button"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/find_device"
+            android:background="@drawable/main_menu"
+            android:drawableLeft="@drawable/startmeasure"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp"
+            android:text="完成测量"
+            android:textColor="#545252"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/find_device"
+            android:layout_width="250dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/main_menu"
+            android:drawableLeft="@drawable/startmeasure"
+            android:text="连接设备"
+            android:textColor="#545252"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+</RelativeLayout>

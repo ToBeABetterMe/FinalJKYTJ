@@ -1,0 +1,93 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login"
+    android:orientation="vertical"
+    tools:context="com.c102c.finalJKYTJ.MyActivity" >
+       <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+   
+<LinearLayout 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+     >
+    <Spinner
+        android:id="@+id/spinner_area"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="180dp"
+        android:background="@drawable/sa" />
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="200dp"
+        android:layout_marginTop="5dp"
+        android:visibility="invisible"
+        android:layout_marginRight="200dp" >
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:background="@drawable/sa" />
+
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+            android:layout_marginLeft="5dp"
+            android:background="@drawable/sa" />
+
+        <Spinner
+            android:id="@+id/spinner4"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_weight="1"
+             android:layout_marginLeft="5dp"
+            android:background="@drawable/sa" />
+    </LinearLayout>
+
+    <Spinner
+        android:id="@+id/spinner5"
+        android:visibility="invisible"
+        android:layout_width="500dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/sa" />
+
+    <ListView
+        android:id="@+id/user_list"
+        android:layout_width="500dp"
+        android:layout_marginTop="5dp"
+        android:layout_height="200dp"
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal" >
+    </ListView>
+
+    <Button
+        android:id="@+id/btn_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/loginbefore"
+    />
+</LinearLayout>
+     <ProgressBar
+            android:id="@+id/waitProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="visible" />
+ </FrameLayout>
+</LinearLayout>

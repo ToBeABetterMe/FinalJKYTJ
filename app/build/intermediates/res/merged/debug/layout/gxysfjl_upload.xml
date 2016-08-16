@@ -1,0 +1,987 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="高血压随访记录表"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/gxysfjl_btn_bianji"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="60dp"
+            android:alpha="1"
+            android:gravity="center"
+            android:text="修改"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/gxysfjl_btn_OK"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:background="@drawable/jktj_upload_btn"
+            android:gravity="center"
+            android:visibility="visible" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@id/sl_gxyxx"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/rl_title"
+        android:layout_marginTop="2.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_grxm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="姓名*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_name"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:id="@id/tv_ytjxh1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一体机业务序号："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_machineNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_dabh01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="高血压专项编号："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_specialNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zzbm01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="症状："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_symptomCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zzbm01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="症状(其他)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_symptomOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_tzxx01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体重(kg)*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_weight"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体重-目标值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_signsOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_qttz01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体症-其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_weightTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_ydcs01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每周运动次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_perWeekMovements"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每周运动次数-目标值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_perWeekMovementsTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xltz01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心理调整："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_psychologicalCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_fyyc01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="服药依从性："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_doseCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zzyy01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊原因："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_referralReason"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sfys01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="筛查医生代码："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_flupDoctorCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sfjg02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="筛查机构名称："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_flupOrgName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_grxh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="居民个人ID*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_personId"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sfrq01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="筛查日期*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@id/HypertensionFlup_upload_et_flupDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xyxx01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血压-收缩压(mmHg)*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_SBP"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:onClick="StartMeasurement" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_tzzs01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体质指数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_bmi"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体质指数-目标值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_bmiTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_rxyl01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日吸烟量(支)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_dailySmoking"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日吸烟量-目标值(支)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_dailySmokingTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_ydsj01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每次运动时间(分钟)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_perWeekTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="每次运动时间-目标值(分钟)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_perWeekTimesTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zyxw01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="遵医行为："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_complianceCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_ywbl01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="药物不良反应："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_adverseReactionCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zzjg01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊机构："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_referralOrg"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sfys02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="随访医生名称："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_flupDoctorName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xcsf01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下次随访日期："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@id/HypertensionFlup_upload_et_nextFlupDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="35.0dip"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:visibility="visible" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="健康一体机编码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_machineCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sffs01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="随访方式*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_flupMode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xyxx02"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血压-舒张压(mmHg)*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_DBP"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:onClick="StartMeasurement" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xiny01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="脉率："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_heartRate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal"
+                            android:onClick="StartMeasurement" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_ryjl01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日饮酒量(两)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_dailyDrinking"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="日饮酒量-目标值(两)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_dailyDrinkingTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:inputType="numberDecimal" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_syqk01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="摄盐情况："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_saltIntakeCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="摄盐情况-目标值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_saltIntakeCodeTarget"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_fzjc01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="辅助检查："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_aidCheck"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sffl01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="此次随访分类："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/HypertensionFlup_upload_et_flupTypeCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_zzks01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊科室："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_referralDepartment"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_sfjg01"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="随访机构代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/HypertensionFlup_upload_et_flupOrgCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ff4682b4"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="用药情况"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="23.0sp" />
+
+                    <Button
+                        android:id="@+id/add_yyqkButton"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/add_medicine_btn"
+                        android:visibility="invisible" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffb6c1"
+                    android:orientation="horizontal" >
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="药品代码"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="22.0sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="药品名称"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="22.0sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="药品用法"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="22.0sp" />
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:gravity="center"
+                        android:text="用品用量"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="22.0sp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/medicine_usingListView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" >
+            </ListView>
+        </LinearLayout>
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@id/pb_upload"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+</RelativeLayout>

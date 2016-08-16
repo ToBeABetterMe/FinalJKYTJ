@@ -1,0 +1,286 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="news_titles">
+        <item>基本信息</item>
+        <item>健康信息</item>
+        <item>既往病史</item>
+    </string-array>
+    <string-array name="schoolYear">
+        <item>2000</item>
+        <item>2001</item>
+        <item>2002</item>
+        <item>2003</item>
+        <item>2004</item>
+        <item>2005</item>
+        <item>2006</item>
+        <item>2007</item>
+        <item>2008</item>
+        <item>2009</item>
+        <item>2010</item>
+        <item>2011</item>
+        <item>2012</item>
+        <item>2013</item>
+        <item>2014</item>
+        <item>2015</item>
+        <item>2016</item>
+    </string-array>
+
+    <string-array name="department">
+        <item>土木</item>
+        <item>机械</item>
+        <item>力学</item>
+        <item>运输</item>
+        <item>地学</item>
+        <item>物理</item>
+        <item>建筑</item>
+        <item>材料</item>
+        <item>信息</item>
+        <item>电气</item>
+        <item>数学</item>
+        <item>图书馆</item>
+        <item>经管</item>
+        <item>公共</item>
+        <item>人文</item>
+        <item>外语</item>
+        <item>工业</item>
+        <item>体育</item>
+        <item>心理</item>
+        <item>思政</item>
+        <item>生命</item>
+        <item>艺术</item>
+        <item>马院</item>
+        <item>武装部</item>
+    </string-array>
+
+    <string-array name="date">
+        <item>阿妹</item>
+        <item>阿郎</item>
+        <item>陈奕迅</item>
+        <item>周杰伦</item>
+        <item>曾一鸣</item>
+        <item>成龙</item>
+        <item>王力宏</item>
+        <item>汪峰</item>
+        <item>王菲</item>
+        <item>那英</item>
+        <item>张伟</item>
+        <item>张学友</item>
+        <item>李德华</item>
+        <item>郑源</item>
+        <item>白水水</item>
+        <item>白天不亮</item>
+        <item>陈龙</item>
+        <item>陈丽丽</item>
+        <item>哈林</item>
+        <item>高进</item>
+        <item>高雷</item>
+        <item>阮今天</item>
+        <item>龚琳娜</item>
+        <item>苏醒</item>
+        <item>苏永康</item>
+        <item>陶喆</item>
+        <item>沙宝亮</item>
+        <item>宋冬野</item>
+        <item>宋伟</item>
+        <item>袁成杰</item>
+        <item>戚薇</item>
+        <item>齐大友</item>
+        <item>齐天大圣</item>
+        <item>品冠</item>
+        <item>吴克群</item>
+        <item>BOBO</item>
+        <item>Jobs</item>
+        <item>动力火车</item>
+        <item>伍佰</item>
+        <item>#蔡依林</item>
+        <item>$797835344$</item>
+        <item>Jack</item>
+        <item>~夏先生</item>
+    </string-array>
+
+    <string-array name="nation">
+        <item>01 汉族</item>
+        <item>02 蒙古族</item>
+        <item>03 回族</item>
+        <item>04 藏族</item>
+        <item>05 维吾尔族</item>
+        <item>06 苗族</item>
+        <item>07 彝族</item>
+        <item>08 壮族</item>
+        <item>09 布依族</item>
+        <item>10 朝鲜族</item>
+        <item>11 满族</item>
+        <item>12 侗族</item>
+        <item>13 瑶族</item>
+        <item>14 白族</item>
+        <item>15 土家族</item>
+        <item>16 哈尼族</item>
+        <item>17 哈萨克族</item>
+        <item>18 傣族</item>
+        <item>19 黎族</item>
+        <item>20 僳僳族</item>
+        <item>21 佤族</item>
+        <item>22 畲族</item>
+        <item>23 高山族</item>
+        <item>24 拉祜族</item>
+        <item>25 水族</item>
+        <item>26 东乡族</item>
+        <item>27 纳西族</item>
+        <item>28 景颇族</item>
+        <item>29 柯尔克孜族</item>
+        <item>30 土族</item>
+        <item>31 达斡尔族</item>
+        <item>32 仫佬族</item>
+        <item>33 羌族</item>
+        <item>34 布朗族</item>
+        <item>35 撒拉族</item>
+        <item>36 毛难族</item>
+        <item>37 仡佬族</item>
+        <item>38 锡伯族</item>
+        <item>39 阿昌族</item>
+        <item>40 普米族</item>
+        <item>41 塔吉克族</item>
+        <item>42 怒族</item>
+        <item>43 乌孜别克族</item>
+        <item>44 俄罗斯族</item>
+        <item>45 鄂温克族</item>
+        <item>46 崩龙族</item>
+        <item>47 保安族</item>
+        <item>48 裕固族</item>
+        <item>49 京族</item>
+        <item>50 塔塔尔族</item>
+        <item>51 独龙族</item>
+        <item>52 鄂伦春族</item>
+        <item>53 赫哲族</item>
+        <item>54 门巴族</item>
+        <item>55 珞巴族</item>
+        <item>56 基诺族</item>
+    </string-array>
+    <string-array name="select_zousu">
+        <item>12.5mm/s</item>
+        <item>25mm/s</item>
+        <item>50mm/s</item>
+    </string-array>
+    <string-array name="select_gain">
+        <item>5mm/mV</item>
+        <item>10mm/mV</item>
+        <item>20mm/mV</item>
+    </string-array>
+    <string-array name="yyqk_mc">
+        <item>青霉素（钾盐、钠盐</item>
+        <item>阿莫西林（羟氨苄青霉素</item>
+        <item>氨苄西林（氨苄青霉素）</item>
+        <item>头孢氨苄</item>
+        <item>头孢唑林钠</item>
+        <item>盐酸四环素（成人用）</item>
+        <item>红霉素</item>
+        <item>诺氟沙星（氟哌酸）（成人用）</item>
+        <item>环丙沙星（盐酸盐，乳酸盐）</item>
+        <item>甲硝唑（灭滴灵、甲硝羟乙唑）</item>
+        <item>盐酸小蘖碱（黄连素）</item>
+        <item>复方磺胺甲噁唑（SMZ.co）</item>
+        <item>呋喃唑酮（痢特灵）</item>
+        <item>病毒灵</item>
+        <item>阿司匹林（乙酰水杨酸）</item>
+        <item>安痛定</item>
+        <item>对乙酰氨基酚（扑热息痛）</item>
+        <item>扑炎痛</item>
+        <item>苯巴比妥（鲁米那）</item>
+        <item>苯巴比妥钠</item>
+        <item>盐酸异丙嗪</item>
+        <item>盐酸肾上腺素</item>
+        <item>硝酸甘油</item>
+        <item>心得安</item>
+        <item>复方罗布麻</item>
+        <item>复方降压片</item>
+        <item>氨茶碱（茶碱乙烯双胺）</item>
+        <item>舒喘灵</item>
+        <item>复方甘草</item>
+        <item>枸橼酸喷托维林（咳必清）</item>
+        <item>氯化铵</item>
+        <item>必嗽平（溴已新）</item>
+        <item>复方氢氧化铝（胃舒平）</item>
+        <item>碳酸氢钠（小苏打）</item>
+        <item>胃必治  </item>
+        <item>西米替丁</item>
+        <item>硫糖铝</item>
+        <item>乳酶生（表飞鸣）</item>
+        <item>多酶片</item>
+        <item>颠茄</item>
+        <item>吗丁林</item>
+        <item>胃复安</item>
+        <item>开塞露</item>
+        <item>果导片</item>
+        <item>药用炭 </item>
+        <item>次碳酸铋</item>
+        <item>阿苯达唑（肠虫清）</item>
+        <item>枸橼酸哌嗪（驱蛔灵）</item>
+        <item>硫酸亚铁</item>
+        <item>叶酸</item>
+        <item>马来酸氯苯那敏（扑尔敏）</item>
+        <item>息斯敏</item>
+        <item>赛庚定</item>
+        <item>葡萄糖酸钙</item>
+        <item>维丁胶性钙</item>
+        <item>葡萄糖酸锌</item>
+        <item>维生素A</item>
+        <item>维生素B1（盐酸硫胺）</item>
+        <item>维生素B12 </item>
+        <item>维生素B6（吡多辛）</item>
+        <item>维生素C（抗坏血酸）</item>
+        <item>维生素AD</item>
+        <item>维生素B2（核黄素）</item>
+        <item>碳酸钙</item>
+        <item>多维丸</item>
+        <item>复合维生素B </item>
+        <item>布洛芬 </item>
+        <item>口服补液盐（ORS）</item>
+        <item>葡萄糖粉</item>
+        <item>洗必泰（氯已定）漱口液</item>
+        <item>西地碘（华素片）</item>
+        <item>氯霉素</item>
+        <item>红霉素</item>
+        <item>甲紫（龙胆紫）</item>
+        <item>鱼石脂</item>
+        <item>尿素</item>
+        <item>松节油</item>
+        <item>达克宁霜</item>
+        <item>洁尔阴</item>
+        <item>甲硝唑（灭滴灵、甲硝羟乙唑）</item>
+        <item>妇炎灵</item>
+        <item>过氧化氢（双氧水）</item>
+        <item>高锰酸钾（PP粉）</item>
+        <item>乙醇（酒精）</item>
+        <item>碘伏</item>
+        <item>灭菌注射用水</item>
+        <item>苯甲醇稀释液</item>
+        <item>纱布 、胶布、绷带、脱脂棉、</item>
+        <item>凡士林、消毒棉签</item>
+        <item>速效感冒胶囊</item>
+        <item>小儿感冒冲剂</item>
+        <item>感冒清</item>
+        <item>柴胡注射液</item>
+        <item>牛黄上清丸</item>
+        <item>三黄片</item>
+        <item>六神丸</item>
+        <item>复方穿心莲</item>
+        <item>板蓝根冲剂</item>
+        <item>藿香正气丸</item>
+        <item>复方丹参片</item>
+        <item>正骨水</item>
+        <item>伤湿止痛膏</item>
+        <item>舒活灵</item>
+        <item>急支糖浆</item>
+        <item>小儿止咳糖浆</item>
+        <item>川贝枇杷膏</item>
+        <item>蛇胆川贝液</item>
+        <item>健胃消食片</item>
+        <item>香砂养胃丸</item>
+        <item>沉香露白露</item>
+        <item>益母草浸膏</item>
+        <item>宫血宁</item>
+        <item>妇炎康 </item>
+        <item>妇科千金片</item>
+    </string-array>
+
+</resources>

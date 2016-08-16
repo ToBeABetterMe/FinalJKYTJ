@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/background_ycf" >
+
+    <LinearLayout
+        android:layout_width="800dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="270dp"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ycfactivity_btn_cjjl"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/ycfcjjl_btn"
+                android:onClick="jump" />
+
+            <Button
+                android:id="@+id/ycfactivity_btn_fjjl"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/ycffjjl_btn"
+                android:onClick="jump" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:orientation="horizontal" >
+
+            <Button
+                android:id="@+id/ycfactivity_btn_chfsjl"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:background="@drawable/ycfchfsjl_btn"
+                android:onClick="jump" />
+
+            <Button
+                android:id="@+id/ycfactivity_btn_ch42fsjl"
+                android:layout_width="0dp"
+                android:layout_height="80dp"
+                android:layout_marginLeft="50dp"
+                android:layout_weight="1"
+                android:background="@drawable/ycfchfs42jl_btn"
+                android:onClick="jump" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

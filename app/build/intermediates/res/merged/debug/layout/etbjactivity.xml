@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_ggws_child_health"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <Button
+        android:id="@+id/etbj_btn_etzxda"
+        android:layout_width="800dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="250dp"
+        android:background="@drawable/etbj_etzxda_btn"
+        android:onClick="jumpTo"
+        android:textSize="46sp" />
+
+    <Button
+        android:id="@+id/etbj_btn_xsejtfsjl"
+        android:layout_width="800dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        android:background="@drawable/etbj_xsjtfsjlsc_btn"
+        android:onClick="jumpTo"
+        android:textSize="46sp" />
+
+</LinearLayout>

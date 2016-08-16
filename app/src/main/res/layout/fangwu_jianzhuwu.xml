@@ -1,0 +1,420 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/topbg"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/healthinformation_user"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="房屋及建筑物"
+            android:textColor="#fffdfdfd"
+            android:textSize="@dimen/text_size_3" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="资产编号："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_assertId"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="资产类别："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_assertType"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="资产名称："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_assertName"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="是否盘盈："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_ifpanying"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll1"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="坐落位置："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_location"
+            style="@style/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll2"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="原值(元)："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_originalValue"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="净值："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_jingzhi"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="numberDecimal" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="管理部门："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_department"
+            style="@style/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll3"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建筑商："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_jianzhuBoss"
+            style="@style/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll4"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="建筑结构："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_structure"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="累计使用年限："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_contact_way"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="使用现状："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_state"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll6"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll5"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="取得方式："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_get_way"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="取得日期："
+            android:textSize="@dimen/text_size_3" />
+
+        <com.health.util.DateEditText
+            android:id="@+id/et_get_date"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="竣工日期："
+            android:textSize="@dimen/text_size_3" />
+
+        <com.health.util.DateEditText
+            android:id="@+id/et_finish_date"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll7"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll6"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="占地面积："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_zhandi_mianji"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="建筑面积："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_jianzhu_mianji"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="使用面积："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_user_mianji"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll8"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll7"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="拥有产权："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_yongyou_chanquan"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="证书号码："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_zhengshu_number"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="所有权人："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_suoyouquanren"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="50dp"
+            android:text="发证时间："
+            android:textSize="@dimen/text_size_3" />
+
+        <com.health.util.DateEditText
+            android:id="@+id/et_fazhengshijian"
+            style="@style/edit_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll9"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll8"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="使用方向："
+            android:textSize="@dimen/text_size_3" />
+
+        <com.health.util.SingleChoiceEditText
+            android:id="@+id/et_shiyongfangxiang"
+            style="@style/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll10"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll9"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="备注："
+            android:textSize="@dimen/text_size_3" />
+
+        <EditText
+            android:id="@+id/et_beizhu"
+            style="@style/edit_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottombg"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:scrollbars="none" >
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/xzgl_title" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="120dp"
+        android:padding="90dp"
+        android:orientation="vertical"
+        android:background="@drawable/xzgl_bk" >
+        <Button android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="jumpTo"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/xztz"/>
+        <Button android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="jumpTo"
+            android:background="@drawable/gzrwtz"/>
+        <Button android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="jumpTo"
+            android:background="@drawable/jxkh"/>
+    </LinearLayout>
+
+</RelativeLayout>

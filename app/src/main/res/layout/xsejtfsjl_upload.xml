@@ -1,0 +1,1746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 新生儿家庭访视 记录上传 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/top_title_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="80.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar"
+        android:gravity="center_vertical" >
+
+        <TextView
+            android:id="@+id/title_bar_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="新生儿随访记录表"
+            android:textColor="#ffffffff"
+            android:textSize="22.0sp" />
+
+        <Button
+            android:id="@+id/baby_title_btn"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/jktj_upload_btn" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/table_body_sv"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/top_title_layout"
+        android:background="@color/shallow_blue"
+        android:fadeScrollbars="false"
+        android:orientation="vertical"
+        android:scrollbarStyle="outsideOverlay" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/right_blank_size"
+            android:orientation="vertical" >
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:text="姓名*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_name"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@+id/name"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@id/NeonatalVisit_upload_et_machineCode"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/name2"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_specialNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/archive_edit_bg"
+                    android:focusable="false"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/NeonatalVisit_upload_et_name"
+                    android:gravity="center"
+                    android:text="居民ID*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_personId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@+id/textView1"
+                    android:background="@drawable/archive_edit_bg"
+                    android:ems="10" >
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/aa"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toLeftOf="@+id/NeonatalVisit_upload_et_specialNo"
+                    android:text="儿童专项编号:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentTop="true"
+                    android:layout_toRightOf="@id/NeonatalVisit_upload_et_machineCode"
+                    android:gravity="center"
+                    android:text="一体机业务序号*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:id="@+id/name2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toRightOf="@+id/NeonatalVisit_upload_et_personId"
+                    android:text="健康一体机编码*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_machineNo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@+id/aa"
+                    android:layout_toRightOf="@+id/textView2"
+                    android:background="@drawable/archive_edit_bg"
+                    android:ems="10" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_genderCode"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期*："
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/NeonatalVisit_upload_et_birthday"
+                    android:layout_width="220.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="身份证号*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_idCard"
+                    android:layout_width="300.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="家庭住址："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_homeAddress"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="父亲*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_fatherName"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="职业："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_fatherOccupation"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_fatherContac"
+                    android:layout_width="150.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/NeonatalVisit_upload_et_fatherBirthday"
+                    android:layout_width="150.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="母亲*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_matherName"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="职业："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_matherOccupation"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="联系电话"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_matherContac"
+                    android:layout_width="150.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/NeonatalVisit_upload_et_matherBirthday"
+                    android:layout_width="150.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="phone"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="体温:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_temperature"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:onClick="StartMeasurement"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="℃ 脉率："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_pulseRate"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:onClick="StartMeasurement"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="次/分钟  呼吸频率："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_respiratoryRate"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="次/分钟　"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生孕周:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_weekOfBirth"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="周   "
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="  母亲妊娠期患病情况："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.MultiChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_pregnancyBeIllCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="助产机构名称:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_midwiferyOrgName"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生情况："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_birthConditionCodes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新生儿窒息:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_neonatalAsphyxiaCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否有畸型："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_deformityCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="畸形描述:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_deformityOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新生儿听力筛查:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_UNHSCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新生儿疾病筛查："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_neonatalScreeningCode"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生体重:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_birthWeight"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg 目前体重："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_currentWeight"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="kg 出生身长："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_birthHeight"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="numberDecimal"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="喂养方式:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_feedingPatternCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="吃奶量："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_feedingAmount"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ml/次 吃奶次数："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_feedingTimes"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="次/日"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="呕吐:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_vomitCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大便："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_fecalCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="大便次数："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_fecalTimes"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="次/日"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="面色:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_complexionCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="黄疸部位："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.MultiChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_jaundiceSiteCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="母亲妊娠期患病情况其他："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_pregnancyBeIllOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前囟大小:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_bregma1"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm × "
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_bregma2"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="cm"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前囟状况："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_bregmaCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脊柱异常:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_spineDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="眼外观:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_eyeAppearanceCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="四肢活动度："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_limbsActivityCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="眼外观异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_eyeAppearanceDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="四肢活动度异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_limbsActivityDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="耳外观:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_earAppearanceCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颈部包块："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_neckMassCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="面色其他："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_complexionOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="前囟其他 ："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_bregmaOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="鼻:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_noseCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="皮肤："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.MultiChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_skinCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar 1分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_apgar1"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar 5分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_apgar5"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar 10分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_apgar10"
+                    android:layout_width="90.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="口腔:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_oralCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肛门："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_anusCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="耳外观异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_earAppearanceDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="颈部包块描述："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_neckMassDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心肺听诊:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_heartLungAuscultationCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="外生殖器："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_externalGenitalCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="鼻异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_noseDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="皮肤其他："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_skinOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="腹部触诊:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_abdominalPalpationCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脊柱："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_spineCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="口腔异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_oralDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="肛门异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_anusDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脐带:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_umbilicalCordCode"
+                    android:layout_width="180dp"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="心肺听诊异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_heartLungAuscultationDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="外生殖器异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_externalGenitalDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="腹部触诊异常："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_abdominalPalpationDesc"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="转诊建议:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_referralCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="原因："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_referralReason"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="机构："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_referralOrg"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="科室："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_referralDepartment"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="脐带其他:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_umbilicalCordOther"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="指导:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.MultiChoiceEditText
+                    android:id="@+id/NeonatalVisit_upload_et_guideCodes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访日期*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/NeonatalVisit_upload_et_flupDate"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下次随访地点："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_nextFlupLocation"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="下次随访日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/NeonatalVisit_upload_et_nextFlupDate"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访医生代码*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_flupDoctorCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新生儿疾病筛查其他:"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_neonatalScreeningOther"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5.0dip"
+                android:orientation="horizontal" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访机构代码*:"
+                    android:textColor="@color/text_color_red"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_flupOrgCode"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访机构名称："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_flupOrgName"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="随访医生名称："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+
+                <EditText
+                    android:id="@+id/NeonatalVisit_upload_et_flupDoctorName"
+                    android:layout_width="180.0dip"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/archive_edit_bg"
+                    android:gravity="center"
+                    android:textColor="@color/text_color_black"
+                    android:textSize="@dimen/text_size_3" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/edit_help_button"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="@dimen/right_blank_size"
+        android:background="@android:color/transparent"
+        android:visibility="gone" />
+
+</RelativeLayout>

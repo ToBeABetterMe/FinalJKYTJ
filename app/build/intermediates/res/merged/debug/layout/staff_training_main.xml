@@ -1,0 +1,38 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/string_working_training_title" >
+    </TextView>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_margin="150dp"
+        android:padding="90dp"
+        android:orientation="vertical"
+        android:background="@drawable/staff_trainging_back_ground" >
+        <Button android:id="@+id/button_knowledge_searching"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="jumpTo"
+            android:layout_marginTop="50dp"
+            android:background="@drawable/yxzscx"/>
+        <Button android:id="@+id/button_working_training"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:onClick="jumpTo"
+            android:background="@drawable/zgpx"/>
+       
+    </LinearLayout>
+
+</RelativeLayout>

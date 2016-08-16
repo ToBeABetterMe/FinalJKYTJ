@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 医疗机构下载3.1.4  -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="医疗机构下载"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/btn_save_jktj"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1.0"
+            android:gravity="center"
+            android:text="保存"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_grxm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="80.0dip"
+        android:text="个人姓名"
+        android:textColor="@color/text_color_black"
+        android:textSize="24.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="医疗机构代码*："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_orgCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_tnbzsbh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="医疗机构类型*："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_orgType"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jddwdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所在行政区域代码*："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_areaCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:textColor="@color/text_color_black" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jmgrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="医疗机构名称*："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_orgName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jdrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="上级医疗机构代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_parentOrgCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jdrdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分级排序："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/Person_down_et_levelOrder"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

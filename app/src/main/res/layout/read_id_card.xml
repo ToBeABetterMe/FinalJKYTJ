@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/idcardtxt" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loginLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="432dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sbackground2"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/idcard"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:layout_marginTop="50dp"
+                android:id="@+id/ivImageview"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                 >
+            </ImageView>
+
+            <TextView
+                android:id="@+id/tv_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:textColor="#0000FF"
+                android:textSize="20dp" />
+            
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/btn_find_id_reader"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/search_button" />
+
+        <Button
+            android:id="@+id/btnInit"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_margin="10dp"
+            android:layout_weight="1"
+            android:background="@drawable/readidcard_button" />
+        <Button
+            android:id="@+id/btn_off"
+            android:layout_width="300dp"
+            android:layout_height="120dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:background="@drawable/offidcard_button" />
+    </LinearLayout>
+
+</LinearLayout>

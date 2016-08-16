@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="nulls"></string-array>
+    <string-array name="jkda_et_genderCode">
+        <item>0 未知的性别</item>
+        <item>1 男</item>
+        <item>2 女</item>
+        <item>9 未说明的性别</item>
+    </string-array>
+    <string-array name="jkda_et_residentType">
+        <item>1 户籍</item>
+        <item>2 非户籍</item>
+    </string-array>
+    <string-array name="jkda_et_ethnicityCode">
+        <item>1 汉族</item>
+        <item>2 少数民族</item>
+    </string-array>
+    <string-array name="jkda_et_bloodGroupCode">
+        <item>1 A型</item>
+        <item>2 B型</item>
+        <item>3 O型</item>
+        <item>4 AB型</item>
+        <item>5 不详</item>
+    </string-array>
+    <string-array name="jkda_et_rhBloodGroupCode">
+        <item>1 否</item>
+        <item>2 是</item>
+        <item>3 不详</item>
+    </string-array>
+    <string-array name="jkda_et_eduBGCode">
+        <item>1 文盲及半文盲</item>
+        <item>2 小学</item>
+        <item>3 初中</item>
+        <item>4 高中/技校/中专</item>
+        <item>5 大学专科及以上</item>
+        <item>6 不详</item>
+    </string-array>
+    <string-array name="jkda_et_occupationCode">
+        <item>1 国家机关、党群组织、企业、事业单位负责人</item>
+        <item>2 专业技术人员</item>
+        <item>3 办事人员和有关人员</item>
+        <item>4 商业、服务业人员</item>
+        <item>5 农、林、牧、渔、水利业生产人员</item>
+        <item>6 生产、运输设备操作人员及有关人员</item>
+        <item>7 军人</item>
+        <item>8 不便分类的其他从业人员</item>
+    </string-array>
+    <string-array name="jkda_et_maritalStatusCode">
+        <item>1 未婚</item>
+        <item>2 已婚</item>
+        <item>3 丧偶</item>
+        <item>4 离婚</item>
+        <item>5 未说明的婚姻状况</item>
+    </string-array>
+    <string-array name="jkda_et_paymentMethodCodes">
+        <item>1 城镇职工基本医疗保险</item>
+        <item>2 城镇居民基本医疗保险</item>
+        <item>3 新型农村合作医疗</item>
+        <item>4 贫困救助</item>
+        <item>5 商业医疗保险</item>
+        <item>6 全公费</item>
+        <item>7 全自费</item>
+        <item>8 其他</item>
+    </string-array>
+    <string-array name="jkda_et_drugAllergyHistoryCodes">
+        <item>1 无</item>
+        <item>2 青霉素</item>
+        <item>3 磺胺</item>
+        <item>4 链霉素</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jkda_et_exposureHistoryCodes">
+        <item>1 无</item>
+        <item>2 化学品</item>
+        <item>3 毒物</item>
+        <item>4 射线</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jkda_et_familyHistoryFatherCodes">
+        <item>1 无</item>
+        <item>2 高血压</item>
+        <item>3 糖尿病</item>
+        <item>4 冠心病</item>
+        <item>5 慢性阻塞性肺疾病</item>
+        <item>6 恶性肿瘤</item>
+        <item>7 脑卒中</item>
+        <item>8 重性精神疾病</item>
+        <item>9 结核病</item>
+        <item>10 肝炎</item>
+        <item>11 其他法定传染病</item>
+        <item>12 职业病</item>
+        <item>13 其他</item>
+    </string-array>
+    <string-array name="jkda_et_familyHistoryMatherCodes">
+        <item>1 无</item>
+        <item>2 高血压</item>
+        <item>3 糖尿病</item>
+        <item>4 冠心病</item>
+        <item>5 慢性阻塞性肺疾病</item>
+        <item>6 恶性肿瘤</item>
+        <item>7 脑卒中</item>
+        <item>8 重性精神疾病</item>
+        <item>9 结核病</item>
+        <item>10 肝炎</item>
+        <item>11 其他法定传染病</item>
+        <item>12 职业病</item>
+        <item>13 其他</item>
+    </string-array>
+    <string-array name="jkda_et_brotherAndSisterCodes">
+        <item>1 无</item>
+        <item>2 高血压</item>
+        <item>3 糖尿病</item>
+        <item>4 冠心病</item>
+        <item>5 慢性阻塞性肺疾病</item>
+        <item>6 恶性肿瘤</item>
+        <item>7 脑卒中</item>
+        <item>8 重性精神疾病</item>
+        <item>9 结核病</item>
+        <item>10 肝炎</item>
+        <item>11 其他法定传染病</item>
+        <item>12 职业病</item>
+        <item>13 其他</item>
+    </string-array>
+    <string-array name="jkda_et_familyHistoryChildrenCodes">
+        <item>1 无</item>
+        <item>2 高血压</item>
+        <item>3 糖尿病</item>
+        <item>4 冠心病</item>
+        <item>5 慢性阻塞性肺疾病</item>
+        <item>6 恶性肿瘤</item>
+        <item>7 脑卒中</item>
+        <item>8 重性精神疾病</item>
+        <item>9 结核病</item>
+        <item>10 肝炎</item>
+        <item>11 其他法定传染病</item>
+        <item>12 职业病</item>
+        <item>13 其他</item>
+    </string-array>
+    <string-array name="jkda_et_geneticHistoryCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jkda_et_disabilityCodes">
+        <item>1 无残疾</item>
+        <item>2 视力残疾</item>
+        <item>3 听力残疾</item>
+        <item>4 言语残疾</item>
+        <item>5 肢体残疾</item>
+        <item>6 智力残疾</item>
+        <item>7 精神残疾</item>
+        <item>8 其他残疾</item>
+    </string-array>
+    <string-array name="jkda_et_kitchenExhaustCode">
+        <item>1 无</item>
+        <item>2 油烟机</item>
+        <item>3 换气扇</item>
+        <item>4 烟囱</item>
+    </string-array>
+    <string-array name="jkda_et_fuelTypeCode">
+        <item>1 液化气</item>
+        <item>2 煤</item>
+        <item>3 天然气</item>
+        <item>4 炤气</item>
+        <item>5 柴火</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="jkda_et_waterCode">
+        <item>1 自来水</item>
+        <item>2 经净化过滤的水</item>
+        <item>3 井水</item>
+        <item>4 河湖水</item>
+        <item>5 塘水</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="jkda_et_toiletCode">
+        <item>1 卫生厕所</item>
+        <item>2 一格或二格粪池式</item>
+        <item>3 马桶</item>
+        <item>4 露天粪坑</item>
+        <item>5 简易棚厕</item>
+    </string-array>
+    <string-array name="jkda_et_livestockColumnCode">
+        <item>1 单设</item>
+        <item>2 室内</item>
+        <item>3 室外</item>
+        <item>4 无</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_symptomCodes">
+        <item>1 无症状</item>
+        <item>2 头痛头晕</item>
+        <item>3 恶心呕吐</item>
+        <item>4 眼花耳鸣</item>
+        <item>5 呼吸困难</item>
+        <item>6 心悸胸闷</item>
+        <item>7 鼻衄出血不止</item>
+        <item>8 四肢发麻</item>
+        <item>9 下肢水肿</item>
+        <item>10 其他</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_flupMode">
+        <item>1 门诊</item>
+        <item>2 家庭</item>
+        <item>3 电话</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_saltIntakeCode">
+        <item>1 轻</item>
+        <item>2 中</item>
+        <item>3 重</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_saltIntakeCodeTarget">
+        <item>1 轻</item>
+        <item>2 中</item>
+        <item>3 重</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_psychologicalCode">
+        <item>1 良好</item>
+        <item>2 一般</item>
+        <item>3 差</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_complianceCode">
+        <item>1 良好</item>
+        <item>2 一般</item>
+        <item>3 差</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_doseCode">
+        <item>1 规律</item>
+        <item>2 间断</item>
+        <item>3 不服药</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_adverseReactionCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="HypertensionFlup_upload_et_flupTypeCode">
+        <item>1 控制满意</item>
+        <item>2 控制不满意</item>
+        <item>3 不良反应</item>
+        <item>4 并发症</item>
+    </string-array>
+    <string-array name="jktj_et_symptomCodes">
+        <item>1 无症状</item>
+        <item>2 头痛</item>
+        <item>3 头晕</item>
+        <item>4 心悸</item>
+        <item>5 胸闷</item>
+        <item>6 胸痛</item>
+        <item>7 慢性咳嗽</item>
+        <item>8 咳痰</item>
+        <item>9 呼吸困难</item>
+        <item>10 多饮</item>
+        <item>11 多尿</item>
+        <item>12 体重下降</item>
+        <item>13 乏力</item>
+        <item>14 关节肿痛</item>
+        <item>15 视力模糊</item>
+        <item>16 手脚麻木</item>
+        <item>17 尿急</item>
+        <item>18 尿痛</item>
+        <item>19 便秘</item>
+        <item>20 腹泻</item>
+        <item>21 恶心呕吐</item>
+        <item>22 眼花</item>
+        <item>23 耳鸣</item>
+        <item>24 乳房胀痛</item>
+        <item>25 其他</item>
+    </string-array>
+    <string-array name="jktj_et_theAgedStatus">
+        <item>1 满意</item>
+        <item>2 基本满意</item>
+        <item>3 说不清楚</item>
+        <item>4 不太满意</item>
+        <item>5 不满意</item>
+    </string-array>
+    <string-array name="jktj_et_selfCareAbilityCode">
+        <item>1 可自理（0～3分)</item>
+        <item>2 轻度依赖（4～8分）</item>
+        <item>3 中度依赖（9～18分）</item>
+        <item>4 不能自理（≥19分）</item>
+    </string-array>
+    <string-array name="jktj_et_cognitiveFunction">
+        <item>1 粗筛阴性</item>
+        <item>2 粗筛阳性</item>
+    </string-array>
+    <string-array name="jktj_et_emotionalState">
+        <item>1 粗筛阴性</item>
+        <item>2 粗筛阳性</item>
+    </string-array>
+    <string-array name="jktj_et_exerciseFrequencyCode">
+        <item>1 每天</item>
+        <item>2 每周一次以上</item>
+        <item>3 偶尔</item>
+        <item>4 不锻炼</item>
+    </string-array>
+    <string-array name="jktj_et_eatingHabitsCodes">
+        <item>1 荤素均衡</item>
+        <item>2 荤食为主</item>
+        <item>3 素食为主</item>
+        <item>4 嗜盐</item>
+        <item>5 嗜油</item>
+        <item>6 嗜糖</item>
+    </string-array>
+    <string-array name="jktj_et_smokingStatusCode">
+        <item>1 从不吸烟</item>
+        <item>2 已戒烟</item>
+        <item>3 吸烟</item>
+    </string-array>
+    <string-array name="jktj_et_drinkingFrequencyCode">
+        <item>1 从不</item>
+        <item>2 偶尔</item>
+        <item>3 经常</item>
+        <item>4 每天</item>
+    </string-array>
+    <string-array name="jktj_et_temperanceCode">
+        <item>1 未戒酒</item>
+        <item>2 已戒酒</item>
+    </string-array>
+    <string-array name="jktj_et_whetherDrunk">
+        <item>1 是</item>
+        <item>2 否</item>
+    </string-array>
+    <string-array name="jktj_et_alcoholTypeCodes">
+        <item>1 白酒</item>
+        <item>2 啤酒</item>
+        <item>3 红酒</item>
+        <item>4 黄酒</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jktj_et_exposureStateCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_dustProtective">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_radiogenProtective">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_physicalProtective">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_chemistryProtective">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_otherProtective">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_lipsCode">
+        <item>1 红润</item>
+        <item>2 苍白</item>
+        <item>3 发绀</item>
+        <item>4 皲裂</item>
+        <item>5 疱疹</item>
+    </string-array>
+    <string-array name="jktj_et_dentitionCodes">
+        <item>1 正常</item>
+        <item>2 缺齿</item>
+        <item>3 龋齿</item>
+        <item>4 义齿（假牙）</item>
+    </string-array>
+    <string-array name="jktj_et_throatCode">
+        <item>1 无充血</item>
+        <item>2 充血</item>
+        <item>3 淋巴滤泡增生</item>
+    </string-array>
+    <string-array name="jktj_et_hearingCode">
+        <item>1 听见</item>
+        <item>2 听不清或无法听见</item>
+    </string-array>
+    <string-array name="jktj_et_motorFunctionCode">
+        <item>1 可顺利完成</item>
+        <item>2 无法独立完成其中任何一个动作</item>
+    </string-array>
+    <string-array name="jktj_et_fundusCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_skinCode">
+        <item>1 正常</item>
+        <item>2 潮红</item>
+        <item>3 苍白</item>
+        <item>4 发绀</item>
+        <item>5 黄染</item>
+        <item>6 色素沉着</item>
+        <item>7 其他</item>
+    </string-array>
+    <string-array name="jktj_et_scleraCode">
+        <item>1 正常</item>
+        <item>2 黄染</item>
+        <item>3 充血</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="jktj_et_lymphNodeCode">
+        <item>1 未触及</item>
+        <item>2 锁骨上</item>
+        <item>3 腋窝</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="jktj_et_barrelChestCode">
+        <item>1 否</item>
+        <item>2 是</item>
+    </string-array>
+    <string-array name="jktj_et_breathSoundCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_raleCode">
+        <item>1 无</item>
+        <item>2 干罗音</item>
+        <item>3 湿罗音</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="jktj_et_rhythmCode">
+        <item>1 齐</item>
+        <item>2 不齐</item>
+        <item>3 绝对不齐</item>
+    </string-array>
+    <string-array name="jktj_et_cardiacSouffleCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_abdomenTendernessCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_abdomenMassCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_abdomenLiverCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_abdomenSplenomegalyCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_abdomenShiftingDullnessCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_legEdemaCode">
+        <item>1 无</item>
+        <item>2 单侧</item>
+        <item>3 双侧不对称</item>
+        <item>4 双侧对称</item>
+    </string-array>
+    <string-array name="jktj_et_dorsalisPedisPulseCode">
+        <item>1 未触及</item>
+        <item>2 触及双侧对称</item>
+        <item>3 触及左侧弱或消失</item>
+        <item>4 触及右侧弱或消失</item>
+    </string-array>
+    <string-array name="jktj_et_analFingerCodes">
+        <item>1 未及异常</item>
+        <item>2 触痛</item>
+        <item>3 包块</item>
+        <item>4 前列腺异常</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jktj_et_breastCodes">
+        <item>1 未见异常</item>
+        <item>2 乳房切除</item>
+        <item>3 异常泌乳</item>
+        <item>4 乳腺包块</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jktj_et_vulvaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_vaginaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_vcervixCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_uterusCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_uterineAccessoriesCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_urineProteinCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="jktj_et_urineSugarCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="jktj_et_urineKetoneCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="jktj_et_urineOccultBloodCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="jktj_et_ECGCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_fecalOccultBloodCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="jktj_et_HBsAgCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="jktj_et_chestXRayCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_BScanCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_papSmearCode">
+        <item>1 正常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="jktj_et_flatAndQualityCode">
+        <item>1 是</item>
+        <item>2 基本是</item>
+    </string-array>
+    <string-array name="jktj_et_qiDeficiencyCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_yangXuzhiCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_yinDeficiencyCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_phlegmDampnessQualityCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_hotAndHumidQualityCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_bloodStasisCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_qiStagnationCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_specialQualityCode">
+        <item>1 是</item>
+        <item>2 倾向是</item>
+    </string-array>
+    <string-array name="jktj_et_cerebrovascularCodes">
+        <item>1 未发现</item>
+        <item>2 缺血性卒中</item>
+        <item>3 脑出血</item>
+        <item>4 蛛网膜下腔出血</item>
+        <item>5 短暂性脑缺血发作</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="jktj_et_kidneyDiseaseCodes">
+        <item>1 未发现</item>
+        <item>2 糖尿病肾病</item>
+        <item>3 肾功能衰竭</item>
+        <item>4 急性肾炎</item>
+        <item>5 慢性肾炎</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="jktj_et_heartDiseaseCodes">
+        <item>1 未发现</item>
+        <item>2 心肌梗死</item>
+        <item>3 心绞痛</item>
+        <item>4 冠状动脉血运重建</item>
+        <item>5 充血性心力衰竭</item>
+        <item>6 心前区疼痛</item>
+        <item>7 其他</item>
+    </string-array>
+    <string-array name="jktj_et_vascularDiseaseCodes">
+        <item>1 未发现</item>
+        <item>2 夹层动脉瘤</item>
+        <item>3 动脉闭塞性疾病</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="jktj_et_eyeDiseaseCodes">
+        <item>1 未发现</item>
+        <item>2 视网膜出血或渗出</item>
+        <item>3 视乳头水肿</item>
+        <item>4 白内障</item>
+        <item>5 其他</item>
+    </string-array>
+    <string-array name="jktj_et_nerveSystemDiseaseCode">
+        <item>1 未发现</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_otherSystemDiseaseCode">
+        <item>1 未发现</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="jktj_et_healthEvaluationCode">
+        <item>1 体检无异常</item>
+        <item>2 有异常</item>
+    </string-array>
+    <string-array name="jktj_et_healthGuidanceCodes">
+        <item>1 纳入慢性病患者健康管理</item>
+        <item>2 建议复查</item>
+        <item>3 建议转诊</item>
+        <item>4 定期随访</item>
+    </string-array>
+    <string-array name="jktj_et_riskFactorsCodes">
+        <item>1 戒烟</item>
+        <item>2 健康饮酒</item>
+        <item>3 饮食</item>
+        <item>4 锻炼</item>
+        <item>5 减体重</item>
+        <item>6 建议接种疫苗</item>
+        <item>7 其他</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_symptomCodes">
+        <item>1 无症状</item>
+        <item>2 多饮</item>
+        <item>3 多食</item>
+        <item>4 多尿</item>
+        <item>5 视力模糊</item>
+        <item>6 感染</item>
+        <item>7 手脚麻木</item>
+        <item>8 下肢浮肿</item>
+        <item>9 体重明显下降</item>
+        <item>10 其他</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_flupMode">
+        <item>1 门诊</item>
+        <item>2 家庭</item>
+        <item>3 电话</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_dorsalisPedisPulseCode">
+        <item>1 未触及</item>
+        <item>2 触及</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_psychologicalCode">
+        <item>1 良好</item>
+        <item>2 一般</item>
+        <item>3 差</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_complianceCode">
+        <item>1 良好</item>
+        <item>2 一般</item>
+        <item>3 差</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_doseCode">
+        <item>1 规律</item>
+        <item>2 间断</item>
+        <item>3 不服药</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_adverseReactionCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_lowBloodSugarCode">
+        <item>1 无</item>
+        <item>2 偶尔</item>
+        <item>3 频繁</item>
+    </string-array>
+    <string-array name="DiabetesFlup_upload_et_flupTypeCode">
+        <item>1 控制满意</item>
+        <item>2 控制不满意</item>
+        <item>3 不良反应</item>
+        <item>4 并发症</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_pastHistoryCodes">
+        <item>1 无</item>
+        <item>2 心脏病</item>
+        <item>3 肾脏疾病</item>
+        <item>4 肝脏疾病</item>
+        <item>5 高血压</item>
+        <item>6 贫血</item>
+        <item>7 糖尿病</item>
+        <item>8 其他</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_familyHistoryCodes">
+        <item>1 遗传性疾病史</item>
+        <item>2 精神疾病史</item>
+        <item>3 其他</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_personalHistoryCodes">
+        <item>1 吸烟</item>
+        <item>2 饮酒</item>
+        <item>3 服用药物</item>
+        <item>4 接触有毒有害物质</item>
+        <item>5 接触放射线</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_surgeryHistoryCode">
+        <item>1 有</item>
+        <item>2 无</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_cardiacAuscultationCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_lungAuscultationCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_vulvaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_vaginaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_cervixCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_uterusCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_uterineAccessoriesCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_urineProteinCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_urineSugarCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_urineKetoneCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_urineOccultBloodCode">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_bloodGroupCode">
+        <item>1 A型</item>
+        <item>2 B型</item>
+        <item>3 O型</item>
+        <item>4 AB型</item>
+        <item>5 不详</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_rhBloodGroupCode">
+        <item>1 否</item>
+        <item>2 是</item>
+        <item>3 不详</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_vaginalFluidCodes">
+        <item>1 未见异常</item>
+        <item>2 滴虫</item>
+        <item>3 假丝酵母菌</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_vaginalCleanlinessCode">
+        <item>1 Ⅰ度</item>
+        <item>2 Ⅱ度</item>
+        <item>3 Ⅲ度</item>
+        <item>4 Ⅳ度</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_HBsAgCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_antiHBsCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_HBeAgCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_HBeAbCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_HBcAbCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_syphilisCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_HIVCode">
+        <item>1 阴性</item>
+        <item>2 阳性</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_overallAssessmentCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_healthGuideCodes">
+        <item>1 个人卫生</item>
+        <item>2 心理</item>
+        <item>3 营养</item>
+        <item>4 避免致畸因素和疾病对胚胎的不良影响</item>
+        <item>5 产前筛查宣传告知</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="PregnantFirstCheck_upload_et_referralCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="PregnantRecheck_upload_et_foetalCirculationCode">
+        <item>1 枕先露 LOA</item>
+        <item>2 枕先露 ROA</item>
+        <item>3 枕先露 LOT</item>
+        <item>4 枕先露 ROT</item>
+        <item>5 枕先露 LOP</item>
+        <item>6 枕先露 ROP</item>
+        <item>7 臀先露 LSA</item>
+        <item>8 臀先露 LST</item>
+        <item>9 臀先露 LSP</item>
+        <item>10 臀先露 RSA</item>
+        <item>11 臀先露 RST</item>
+        <item>12 臀先露 RSP</item>
+        <item>13 肩先露 LSCA</item>
+        <item>14 肩先露 LSCP</item>
+        <item>15 肩先露 RSCA</item>
+        <item>16 肩先露 RSCP</item>
+        <item>17 面先露 LMA</item>
+        <item>18 面先露 LMT</item>
+        <item>19 面先露 LMP</item>
+        <item>20 面先露 RMA</item>
+        <item>21 面先露 RMT</item>
+        <item>22 面先露 RMP</item>
+        <item>99 不清</item>
+    </string-array>
+    <string-array name="PregnantRecheck_upload_et_leucocyte">
+        <item>0 -</item>
+        <item>1 +–</item>
+        <item>2 +</item>
+        <item>3 ++</item>
+        <item>4 +++</item>
+        <item>5 ++++</item>
+    </string-array>
+    <string-array name="PregnantRecheck_upload_et_typeCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantRecheck_upload_et_guideCodes">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PregnantRecheck_upload_et_referralCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_breastCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_lochiaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_uterusCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_woundCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_typeCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_guideCodes">
+        <item>1 个人卫生</item>
+        <item>2 心理</item>
+        <item>3 营养</item>
+        <item>4 母乳喂养</item>
+        <item>5 新生儿护理与喂养</item>
+        <item>6 其他</item>
+    </string-array>
+    <string-array name="PostpartumVisit_upload_et_referralCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_breastCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_lochiaCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_woundCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_typeCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_uterusCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_guideCodes">
+        <item>1 性保健</item>
+        <item>2 避孕</item>
+        <item>3 婴儿喂养及营养</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="Postpartum42Visit_upload_et_processCode">
+        <item>1 结案</item>
+        <item>2 转诊</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_pregnancyBeIllCode">
+        <item> 1 糖尿病</item>
+        <item>2 妊娠期高血压</item>
+        <item>3 其他</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_birthConditionCodes">
+        <item>1 顺产</item>
+        <item>2 胎头吸引</item>
+        <item>3 产钳</item>
+        <item>4 剖宫</item>
+        <item>5 双多胎</item>
+        <item>6 臀位</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_neonatalAsphyxiaCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_deformityCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_UNHSCode">
+        <item>1 通过</item>
+        <item>2 未通</item>
+        <item>3 未筛</item>
+        <item>4 不详</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_neonatalScreeningCode">
+        <item>1 甲低</item>
+        <item>2 苯丙酮尿症</item>
+        <item>3 其他遗传代谢病</item>
+        <item>4 正常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_feedingPatternCode">
+        <item>1 纯母乳</item>
+        <item>2 混合</item>
+        <item>3 人工</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_vomitCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_fecalCode">
+        <item>1 模糊</item>
+        <item>2 稀</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_complexionCode">
+        <item>1 红润</item>
+        <item>2 黄染</item>
+        <item>3 其他</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_jaundiceSiteCode">
+        <item>1 面部</item>
+        <item>2 躯干</item>
+        <item>3 四肢</item>
+        <item>4 手足</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_bregmaCode">
+        <item>1 正常</item>
+        <item>2 膨隆</item>
+        <item>3 凹陷</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_eyeAppearanceCode">
+        <item> 1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_limbsActivityCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_earAppearanceCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_neckMassCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_noseCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_skinCode">
+        <item>1 未见异常</item>
+        <item>2 湿疹</item>
+        <item>3 糜烂</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_oralCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_anusCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_heartLungAuscultationCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_externalGenitalCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_abdominalPalpationCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_spineCode">
+        <item>1 未见异常</item>
+        <item>2 异常</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_umbilicalCordCode">
+        <item>1 未脱</item>
+        <item>2 脱落</item>
+        <item>3 脐部有渗出</item>
+        <item>4 其他</item>
+    </string-array>
+    <string-array name="NeonatalVisit_upload_et_referralCode">
+        <item>1 无</item>
+        <item>2 有</item>
+    </string-array>
+</resources>

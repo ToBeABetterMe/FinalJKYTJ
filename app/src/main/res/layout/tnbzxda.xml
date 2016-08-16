@@ -1,0 +1,754 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 糖尿病专项档案 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="糖尿病专项档案"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/tnbdz_btn_edit"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:alpha="1"
+            android:background="@drawable/mbgl_add_record_btn"
+            android:gravity="center"
+            android:textSize="24.0sp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70.0dip"
+        android:background="@drawable/sbackground1"
+        android:orientation="horizontal" >
+
+        <ScrollView
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal" >
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="60.0dip"
+                        android:layout_weight="2.0"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_xm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="姓名："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_name"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_tnbzsbh"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="糖尿病专属编号："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_specialNo"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jddwdm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="建档单位代码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_registerOrgCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jdrxm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="建档人姓名："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_registerDoctorName"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_qzdwdm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="确诊单位代码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_diagnoseOrgCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_qzysxm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="确诊医生姓名："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_diagnoseDoctorName"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_szy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="舒张压："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <com.health.util.SingleChoiceEditText
+                                android:id="@+id/DiabetesSpecial_et_DBP"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_xcsfrq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="下次随访日期："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_nextFlupDate"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="病例种类："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_caseType"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="是否服药："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_doseCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="月服药费用："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_drugCost"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="身高："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_height"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="肾脏病变年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_kidneyDiseaseYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="神经病变年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_neuropathyYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血管病变年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_vascularDiseaseYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="糖尿病并发症时间："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_complicationDate"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="当前病种："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_currentDisease"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="0.0dip"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="1.0"
+                        android:textColor="@color/text_color_black" />
+
+                    <LinearLayout
+                        android:layout_width="0.0dip"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="60.0dip"
+                        android:layout_weight="2.0"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jmgrid"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="居民个人ID："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_personId"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jdrq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="建档日期："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_registerDate"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jdrdm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="建档人代码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_registerDoctorCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_qzrq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="确诊日期："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <com.health.util.DateEditText
+                                android:id="@+id/DiabetesSpecial_et_diagnoseDate"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_qzysdm"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="确诊医生代码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_diagnoseDoctorCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_ssy"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="收缩压："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_SBP"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:id="@+id/tv_jgdm01"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="血压分级："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_bloodPressureLevel"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="糖尿病管理分级代码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_diabetesLevelCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ICD-10 编码："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_ICDCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="未服药原因："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_noMedicationCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="糖尿病家族史："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_familyHistoryCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="随机血糖值："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_randomBloodGlucose"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="视网膜病变年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_retinalDiseaseYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="皮肤感染年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_skinInfectionYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="无并发症年数："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_noComplYears"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="初次病种："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_initialDisease"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="病例来源："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_caseSourceCode"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="病例来源(其他)："
+                                android:textColor="@color/text_color_black"
+                                android:textSize="25.0sp" />
+
+                            <EditText
+                                android:id="@+id/DiabetesSpecial_et_caseSourceOther"
+                                style="@style/edit_text_style"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:enabled="false" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

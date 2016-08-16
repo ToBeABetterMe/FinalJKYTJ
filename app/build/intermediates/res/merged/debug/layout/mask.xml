@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/healthinformation_user"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/zygl_title" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="800dp"
+        android:layout_height="match_parent"
+ 
+       android:layout_centerInParent="true"
+        android:layout_margin="130dp"
+        android:background="@drawable/zygl_bk"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="80dp" >
+
+        <Button
+            android:id="@+id/btn_otherwupin"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/sbdj" />
+
+        <Button
+            android:id="@+id/btn_fangwujijianzzhuwu"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/ywyfdj" />
+
+        <Button
+            android:id="@+id/btn_wssbzdj"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/bzsrdj" />
+
+        <Button
+            android:id="@+id/btn_xqjbqk"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/xqjbqkdj" />
+
+        <Button
+            android:id="@+id/btn_renyuanguanli"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/zcrydj" />
+    </LinearLayout>
+
+</RelativeLayout>

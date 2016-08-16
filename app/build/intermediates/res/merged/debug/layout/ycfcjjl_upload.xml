@@ -1,0 +1,1839 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 孕产妇初检记录上传 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="孕产妇初检记录上传"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/ycfcjjl_upload_btn_upload"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:alpha="1.0"
+            android:background="@drawable/jktj_upload_btn"
+            android:gravity="center"
+            android:onClick="upload"
+            android:textSize="24sp" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_grxm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="80.0dip"
+        android:text="个人姓名"
+        android:textColor="@color/text_color_black"
+        android:textSize="24.0sp" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="2.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_xm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕妇姓名*:"
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_name"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_jddwdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一体机业务序号*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_machineNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_jdrxm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检日期*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_antenatalCareDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="末次月经*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_LMP"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="梅毒血清学试验*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_syphilisCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="HIV抗体检测代码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_HIVCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_tnbzsbh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕产妇专项编号："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_specialNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_qzdwdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕妇年龄："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_age"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_qzysxm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="丈夫年龄："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_husbandAge"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕次："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_gravidityTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阴道分娩次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginalDeliveryTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="既往史："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_pastHistoryCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="既往史其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_pastHistoryOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人史："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_personalHistoryCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="个人史其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_personalHistoryOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="流产次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_abortionTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="死产次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_deadBirthTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="出生缺陷儿人数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_birthDefects"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体重："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_weight"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩压："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_SBP"
+                            style="@style/edit_text_style"
+                            android:onClick="StartMeasuremenet"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心脏听诊代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_cardiacAuscultationCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肺部听诊代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_lungAuscultationCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-外阴代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vulvaCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-阴道代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginaCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-宫颈代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_cervixCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-宫体代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_uterusCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-附件代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_uterineAccessoriesCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血红蛋白值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_hemoglobin"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血小板计数值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_platelet"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尿常规-尿蛋白："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_urineProteinCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尿常规-尿酮体："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_urineKetoneCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尿常规-其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_urineOther"
+                            style="@style/edit_text_style"
+                            android:onClick="StartMeasurement"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="RH 阴性代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_rhBloodGroupCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肝功能-血清谷丙转氨酶："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_GPT"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肝功能-白蛋白："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_albumin"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肝功能-结合胆红素："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_DBIL"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肾功能-血尿素氮："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_BUN"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阴道清洁度："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginalCleanlinessCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乙型肝炎表面抗体："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_antiHBsCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乙型肝炎 e抗体："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_HBeAbCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="B超："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_BScan"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总体评估描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_overallAssessmentDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_referralCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊机构："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_referralOrg"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检医生代码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_checkDoctorCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检机构代码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_checkOrgCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下次随访日期："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_nextFlupDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/text_color_black" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60.0dip"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_qzrq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕周*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_gestationalWeeks"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:inputType="number" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="丈夫姓名*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_husbandName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="丈夫电话*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_husbandPhone"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="预产期*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_expectedBirthDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_jmgrid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="居民个人ID："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_personId"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_jdrq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="健康一体机编号："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_machineCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_jdrdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕产妇保健手册："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_pregnantManualNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产次："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_deliveryTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="剖宫产次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_caesareanSectionTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="家族史："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_familyHistoryCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="家族史其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_familyHistoryOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科手术史："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_surgeryHistoryCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科手术史其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_surgeryHistoryOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="死胎次数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_stillbirthTimes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="新生儿死亡人数:"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_neonatalDeath"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="身高："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_height"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体质指数："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_bmi"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="舒张压："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_DBP"
+                            style="@style/edit_text_style"
+                            android:onClick="StartMeasuremenet"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="心脏听诊异常："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_cardiacAuscultationDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肺部听诊描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_lungAuscultationDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-外阴描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vulvaDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-阴道描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginaDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-宫颈描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_cervixDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-宫体描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_uterusDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/tv_qzysdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="妇科-附件描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_uterineAccessoriesDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="白细胞计数值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_leucocyte"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血常规-其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_bloodOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尿常规-尿糖："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_urineSugarCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="尿常规-尿潜血："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_urineOccultBloodCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血型代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_bloodGroupCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血糖："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_bloodGlucose"
+                            style="@style/edit_text_style"
+                            android:onClick="StartMeasurement"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肝功能-血清谷草转氨酶"
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_GOT"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肝功能-总胆红素："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_TBIL"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="肾功能-血清肌酐："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_serumCreatinine"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阴道分泌物："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginalFluidCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="阴道分泌物其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_vaginalFluidOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乙型肝炎表面抗原："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_HBsAgCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乙型肝炎 e抗原："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_HBeAgCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="乙型肝炎核心抗体："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_HBcAbCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="总体评估代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_overallAssessmentCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="保健指导代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_healthGuideCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="保健指导代码其他："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_healthGuideOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊原因："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_referralReason"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊科室："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_referralDepartment"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检医生名称："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_checkDoctorName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检机构名称："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@+id/PregnantFirstCheck_upload_et_checkOrgName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

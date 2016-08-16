@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/mbackground" >
+
+    <RelativeLayout
+        android:id="@+id/topbar"
+        android:layout_width="fill_parent"
+        android:layout_height="100dp"
+        android:layout_alignParentTop="true" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/healthmeasure"
+            android:orientation="horizontal" >
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/connect_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="49dp"
+            android:text="未连接"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_4" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/botton_layout"
+        android:layout_below="@+id/topbar"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/sbackground2" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/cont_bg02"
+            android:orientation="vertical"
+            android:padding="30dp" >
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/hp_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/light_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/sys"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <EditText
+                                android:id="@+id/hp"
+                                android:layout_width="120sp"
+                                android:layout_height="40sp"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:textColor="#0000FF"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="mmHg"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20px"
+                                android:text="参考范围：90-140mmHg"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <ImageView
+                                android:id="@+id/lp_image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:src="@drawable/light_blue" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="舒张压"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <EditText
+                                android:id="@+id/lp"
+                                android:layout_width="120sp"
+                                android:layout_height="40sp"
+                                android:clickable="false"
+                                android:cursorVisible="false"
+                                android:focusable="false"
+                                android:focusableInTouchMode="false"
+                                android:textColor="#0000FF"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="mmHg"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20px"
+                                android:text="参考范围：60-90mmHg"
+                                android:textColor="@color/duckgrey"
+                                android:textSize="@dimen/text_size_1" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/pulse_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/light_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_size_1"
+                            android:text="脉率"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <EditText
+                            android:id="@+id/mb"
+                            android:layout_width="120sp"
+                            android:layout_height="40sp"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="#0000FF"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="bpm"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="32px"
+                            android:text="参考范围：60-100次/分	"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/bo_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/light_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_size_1"
+                            android:text="血氧"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <EditText
+                            android:id="@+id/bo"
+                            android:layout_width="120sp"
+                            android:layout_height="@dimen/edittext_size"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="@color/datacolor"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50px"
+                            android:text="参考范围：94%-100%"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <ImageView
+                            android:id="@+id/glu_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/light_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_size_1"
+                            android:text="血糖"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <EditText
+                            android:id="@+id/glu"
+                            android:layout_width="120sp"
+                            android:layout_height="@dimen/edittext_size"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="@color/datacolor"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50px"
+                            android:text="参考范围：3.9-6.1mmol/L(空腹)"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/temp_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/light_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/text_size_1"
+                            android:text="体温"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <EditText
+                            android:id="@+id/temp"
+                            android:layout_width="120sp"
+                            android:layout_height="@dimen/edittext_size"
+                            android:clickable="false"
+                            android:cursorVisible="false"
+                            android:focusable="false"
+                            android:focusableInTouchMode="false"
+                            android:textColor="@color/datacolor"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="℃"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="50px"
+                            android:text="参考范围：35.7-37.5"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:visibility="invisible" >
+
+                        <ImageView
+                            android:id="@+id/ecg_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/light_blue" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginLeft="@dimen/text_size_1"
+                            android:text="心 电"
+                            android:textColor="@color/duckgrey"
+                            android:textSize="@dimen/text_size_1" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:text="测量手臂："
+                            android:textSize="20px" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_testposition"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_left"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="左" />
+
+                            <RadioButton
+                                android:id="@+id/rb_right"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="50px"
+                                android:text="右" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left|center"
+                            android:text="测试人群："
+                            android:textSize="20px" />
+
+                        <RadioGroup
+                            android:id="@+id/rg_testpeople"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal" >
+
+                            <RadioButton
+                                android:id="@+id/rb_newbaby"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="婴幼儿" />
+
+                            <RadioButton
+                                android:id="@+id/rb_child"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20px"
+                                android:text="儿童" />
+
+                            <RadioButton
+                                android:id="@+id/rb_adult"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="20px"
+                                android:checked="true"
+                                android:text="成人" />
+                        </RadioGroup>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/bo_image_view"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginLeft="80dp"
+                    android:background="@drawable/sbackground2"
+                    android:orientation="vertical" >
+                </LinearLayout>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_margin="10dp"
+                android:text="@string/pc300_help"
+                android:textColor="#0072fe"
+                android:textSize="@dimen/text_size_2" />
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/botton_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/cont_bg03"
+        android:padding="2dp" >
+
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/cont_bg03"
+            android:stretchColumns="*" >
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1" >
+
+                <Button
+                    android:id="@+id/start_stop_bp_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="开始测量血压"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/start_stop_ecg_btn"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="开始心电"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/bo_stable_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="锁定血氧"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/upload_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:enabled="false"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="上传数据"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+
+                <Button
+                    android:id="@+id/find_device"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/main_menu"
+                    android:drawableLeft="@drawable/startmeasure"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="5dp"
+                    android:paddingTop="5dp"
+                    android:text="查找设备"
+                    android:textColor="@color/color_main_menu"
+                    android:textSize="20sp" />
+            </TableRow>
+        </TableLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

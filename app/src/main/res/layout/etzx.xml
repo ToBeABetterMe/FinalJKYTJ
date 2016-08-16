@@ -1,0 +1,808 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- 儿童专项 -->
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="儿童专项"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/btn_save_jktj"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1.0"
+            android:gravity="center"
+            android:text="保存"
+            android:visibility="gone" />
+        <Button
+            android:id="@+id/btn_sfjl"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/mbgl_add_record_btn" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_grxm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="50.0dip"
+        android:layout_marginTop="80.0dip"
+        android:text="个人姓名"
+        android:textColor="@color/text_color_black"
+        android:textSize="24.0sp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_xm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_name"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_tnbzsbh"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="儿童专项编号："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_specialNo"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jddwdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_birthday"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jdrxm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="儿童保健卡编号："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_childHealthCardNo"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_qzdwdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生身长："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_birthHeight"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_qzysxm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产次："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_deliveryTimes"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_szy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分娩方式："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <com.health.util.SingleChoiceEditText
+                    android:id="@+id/ChildSpecial_et_deliveryModeCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_xcsfrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生医院："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_birthHospital"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="母亲姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_matherName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="母亲联系电话："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_matherContac"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="17-a-OHP："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_CYP17Code"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="先天性甲状腺功能低下："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_CHCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="高危因素："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_highRiskFactors"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar 1分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_apgar1"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="既往病史："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_pastHistory"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接产医院："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_childbirthHospital"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接产副手："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_childbirthAssistant"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建册单位代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_registerOrgCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建册人姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_registerDoctorName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="0.0dip"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:textColor="@color/text_color_black" />
+
+        <LinearLayout
+            android:layout_width="0.0dip"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="60.0dip"
+            android:layout_weight="2.0"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jmgrid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="居民个人ID："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_personId"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jdrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="性别："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_genderCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jdrdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="户籍地址："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_householdRegister"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_qzrq"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="出生体重："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <com.health.util.DateEditText
+                    android:id="@+id/ChildSpecial_et_birthWeight"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_qzysdm"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="胎次："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_parity"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_ssy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="分娩孕周："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_deliveryGestationalWeeks"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:id="@+id/tv_jgdm01"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="产时情况："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_childbirth"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="父亲姓名："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_fatherName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="父亲联系电话："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_fatherContac"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="新生儿听力筛查："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_UNHSCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="苯丙酮尿症筛："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_PKUCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="是否高危："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_highRiskCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar 5分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_apgar5"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apgar10分钟评分："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_apgar10"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="过敏史："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_allergicHistory"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="接产主手："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_childbirthDoctor"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建册日期："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_registerDate"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建册单位名称："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_registerOrgName"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="建册人代码："
+                    android:textColor="@color/text_color_black"
+                    android:textSize="25.0sp" />
+
+                <EditText
+                    android:id="@+id/ChildSpecial_et_registerDoctorCode"
+                    style="@style/edit_text_style"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:enabled="false" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

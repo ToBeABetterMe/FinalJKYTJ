@@ -1,0 +1,1661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:id="@+id/rl_title"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="个人基本档案"
+            android:textColor="@color/text_color_black"
+            android:textSize="24sp" />
+
+        <Button
+            android:id="@+id/edit"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:background="@drawable/jkda_edit_btn"
+            android:gravity="center"
+            android:onClick="edit" />
+
+        <!-- /> -->
+
+        <Button
+            android:id="@+id/shuaka"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:background="@drawable/jkda_readcard_btn"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <Button
+            android:id="@+id/save"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/edit"
+            android:alpha="1"
+            android:background="@drawable/jkda_upload_btn"
+            android:gravity="center" />
+
+        <Button
+            android:id="@+id/update"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:alpha="1"
+            android:background="@drawable/jkda_upload_btn"
+            android:gravity="center"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/rl_title"
+        android:background="@drawable/sbackground1"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="10dp" >
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="姓名*："
+                        android:textColor="@color/text_color_red"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_name"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_name"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="text"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grxh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_name"
+                        android:layout_marginLeft="180dp"
+                        android:layout_toRightOf="@+id/jkda_et_name"
+                        android:text="居民个人Id:"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_personId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_name"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grxh"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_ytjxh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康档案编号："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_healthFileNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ytjxh"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ytjxh"
+                        android:background="@drawable/archive_edit_bg"
+                        android:ellipsize="middle"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="50dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_xzjg02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/jkda_et_healthFileNumber"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_healthFileNumber"
+                        android:text="居住地代码："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_nowLiveCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ytjxh"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_xzjg02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_xzjg01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="居住地名称："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_nowLiveName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_xzjg01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_xzjg01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hjdz01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_xzjg01"
+                        android:layout_marginLeft="130dp"
+                        android:layout_toRightOf="@+id/jkda_et_nowLiveName"
+                        android:text="居住地地址*："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_nowLiveAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_hjdz01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_hjdz01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_ytjxh2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="健康一体机编码："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_machineCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ytjxh2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ytjxh2"
+                        android:background="@drawable/archive_edit_bg"
+                        android:ellipsize="middle"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="50dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" >
+
+                        <requestFocus />
+                    </EditText>
+
+                    <TextView
+                        android:id="@+id/tv_xzjg022"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/jkda_et_machineCode"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_machineCode"
+                        android:text="一体机业务序号："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_machineNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ytjxh2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_xzjg022"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_jddw01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="户籍地代码*："
+                        android:textColor="@color/text_color_red"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_householdRegisterCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jddw01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jddw02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw01"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_householdRegisterCode"
+                        android:text="户籍地名称："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_householdRegisterName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jddw02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_jddw11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="户籍地地址："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_householdRegisterAddr"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw11"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jddw11"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jdsj01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw11"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_householdRegisterAddr"
+                        android:text="建档日期："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_registerDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jdsj01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jdsj01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_jddw111"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="建档单位代码*："
+                        android:textColor="@color/text_color_red"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_registerOrgCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw111"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jddw111"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jddw222"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw111"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_registerOrgCode"
+                        android:text="建档单位名称："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_registerOrgName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jddw111"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jddw222"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_jdr001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="建档人代码*："
+                        android:textColor="@color/text_color_red"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_registerDoctorCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jdr001"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jdr001"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_jdr002"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jdr001"
+                        android:layout_marginLeft="100dp"
+                        android:layout_toRightOf="@+id/jkda_et_registerDoctorCode"
+                        android:text="建档人姓名："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_registerDoctorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_jdr002"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_jdr002"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_ysdm01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="责任医生代码："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_responsibleDoctorCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ysdm01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ysdm01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ysdm02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ysdm01"
+                        android:layout_marginLeft="90dp"
+                        android:layout_toRightOf="@+id/jkda_et_responsibleDoctorCode"
+                        android:text="责任医生姓名："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_responsibleDoctorName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ysdm02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ysdm02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grxb01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="性别："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_genderCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grxb01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grxb01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_csrq01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grxb01"
+                        android:layout_marginLeft="170dp"
+                        android:layout_toRightOf="@+id/jkda_et_genderCode"
+                        android:text="出生日期："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_birthday"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_csrq01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_csrq01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:focusableInTouchMode="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_sfzh01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="身份证号："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_idCard"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_sfzh01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_sfzh01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_gzdw01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_sfzh01"
+                        android:layout_marginLeft="120dp"
+                        android:layout_toRightOf="@+id/jkda_et_idCard"
+                        android:text="工作单位："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_workUnit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_gzdw01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_gzdw01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_lxr001"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="联系人姓名："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_contacts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_lxr001"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_lxr001"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_lxdh01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_lxr001"
+                        android:layout_marginLeft="110dp"
+                        android:layout_toRightOf="@+id/jkda_et_contacts"
+                        android:text="联系人电话："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_contactsPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_lxdh01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_lxdh01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grdh01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="本人电话："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_phone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grdh01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grdh01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_czlx01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grdh01"
+                        android:layout_marginLeft="120dp"
+                        android:layout_toRightOf="@+id/jkda_et_phone"
+                        android:text="常住类型："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_residentType"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_czlx01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_czlx01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grmz02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="民族名称："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_ethnicityName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grmz02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grmz02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grxx01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grmz02"
+                        android:layout_marginLeft="180dp"
+                        android:layout_toRightOf="@+id/jkda_et_ethnicityName"
+                        android:text="血型："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@id/jkda_et_bloodGroupCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grxx01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grxx01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grmz024"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="民族代码"
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@id/jkda_et_ethnicityCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grmz024"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grmz024"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grxx015"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grmz024"
+                        android:layout_marginLeft="180dp"
+                        android:text="血型："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp"
+                        android:visibility="invisible" />
+
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grxx015"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grxx015"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_rhyx01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="RH阴性："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_rhBloodGroupCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_rhyx01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_rhyx01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_hyzk01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_rhyx01"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_rhBloodGroupCode"
+                        android:text="婚姻状况："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_maritalStatusCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_hyzk01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_hyzk01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_whcd01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="文化程度："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_eduBGCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_whcd01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_whcd01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_grzy01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_whcd01"
+                        android:layout_marginLeft="130dp"
+                        android:layout_toRightOf="@+id/jkda_et_eduBGCode"
+                        android:text="职业："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_occupationCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grzy01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grzy01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_yblx02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="医疗支付方式："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_paymentMethodCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_yblx02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_yblx02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ywgm02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_yblx02"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@+id/jkda_et_paymentMethodCodes"
+                        android:text="医疗支付方式-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_paymentMethodOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ywgm02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ywgm02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_yblx026"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="药物过敏史："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_drugAllergyHistoryCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_yblx026"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_yblx026"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ywgm026"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_yblx026"
+                        android:layout_marginLeft="80dp"
+                        android:layout_toRightOf="@id/jkda_et_drugAllergyHistoryCodes"
+                        android:text="药物过敏史-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_drugAllergyHistoryOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ywgm026"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ywgm026"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp"
+                        android:visibility="invisible" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="暴露史："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_exposureHistoryCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_exposureHistoryCodes"
+                        android:text="遗传病史："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_geneticHistoryCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2y"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="遗传病史名称："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_geneticHistoryOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2y"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2y"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02y"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2y"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_geneticHistoryOther"
+                        android:text="残疾情况-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_disabilityOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02y"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02y"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家族疾病史-父亲："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_familyHistoryFatherCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2q"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2q"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02q"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2q"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_familyHistoryFatherCodes"
+                        android:text="家族疾病史父亲-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_familyHistoryFatherOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02q"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02q"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2qm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家族疾病史-母亲："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_familyHistoryMatherCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qm"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2qm"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02qm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qm"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_familyHistoryMatherCodes"
+                        android:text="家族疾病史母亲-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_familyHistoryMatherOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02qm"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02qm"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2qmx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家族疾病史-兄弟姐妹："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_brotherAndSisterCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qmx"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2qmx"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02qmx"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qmx"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_brotherAndSisterCodes"
+                        android:text="家族疾病兄弟姐妹-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_brotherAndSisterOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02qmx"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02qmx"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_grbls2qmxz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="家族疾病史-子女："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_familyHistoryChildrenCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qmxz"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_grbls2qmxz"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ycbs02qmxz"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_grbls2qmxz"
+                        android:layout_marginLeft="150dp"
+                        android:layout_toRightOf="@+id/jkda_et_familyHistoryChildrenCodes"
+                        android:text="家族疾病史子女-其他："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <EditText
+                        android:id="@+id/jkda_et_familyHistoryChildrenOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ycbs02qmxz"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ycbs02qmxz"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_cjqk02"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="残疾情况："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.MultiChoiceEditText
+                        android:id="@+id/jkda_et_disabilityCodes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_cjqk02"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_cjqk02"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:maxWidth="80dp"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_cfss01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_cjqk02"
+                        android:layout_marginLeft="130dp"
+                        android:layout_toRightOf="@+id/jkda_et_disabilityCodes"
+                        android:text="厨房排风设施："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_kitchenExhaustCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_cfss01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_cfss01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_rllx01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="燃料类型："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_fuelTypeCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_rllx01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_rllx01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_ysqk01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_rllx01"
+                        android:layout_marginLeft="130dp"
+                        android:layout_toRightOf="@+id/jkda_et_fuelTypeCode"
+                        android:text="饮水："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_waterCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_ysqk01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_ysqk01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginTop="30dp" >
+
+                    <TextView
+                        android:id="@+id/tv_csqk01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="厕所："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_toiletCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_csqk01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_csqk01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/tv_qcqk01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_csqk01"
+                        android:layout_marginLeft="180dp"
+                        android:layout_toRightOf="@+id/jkda_et_toiletCode"
+                        android:text="禽畜栏："
+                        android:textColor="@color/text_color_black"
+                        android:textSize="25sp" />
+
+                    <com.health.util.SingleChoiceEditText
+                        android:id="@+id/jkda_et_livestockColumnCode"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/tv_qcqk01"
+                        android:layout_marginLeft="5dp"
+                        android:layout_toRightOf="@+id/tv_qcqk01"
+                        android:background="@drawable/archive_edit_bg"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:textColor="#ff0000ee"
+                        android:textSize="20sp" />
+                </RelativeLayout>
+                <!-- 既往史 -->
+
+                <LinearLayout
+                    android:id="@+id/ll_jws"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical" >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ff4682b4"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="既往史"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="23.0sp" />
+
+                            <Button
+                                android:id="@+id/add_jwsButton"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:background="@drawable/add_jws_btn"
+                                android:visibility="invisible" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#ffffb6c1"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:text="类型"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="22.0sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:text="疾病代码"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="22.0sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:text="日期"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="22.0sp" />
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:gravity="center"
+                                android:text="附加"
+                                android:textColor="@color/text_color_black"
+                                android:textSize="22.0sp" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ListView
+                        android:id="@+id/jws_listView"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp" >
+                    </ListView>
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+</RelativeLayout>

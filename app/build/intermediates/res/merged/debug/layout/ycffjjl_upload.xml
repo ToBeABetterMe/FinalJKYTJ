@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <RelativeLayout
+        android:id="@id/rl_title"
+        android:layout_width="fill_parent"
+        android:layout_height="65.0dip"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/bg_title_bar" >
+
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center"
+            android:text="孕产妇复检记录上传"
+            android:textColor="@color/text_color_black"
+            android:textSize="24.0sp" />
+
+        <Button
+            android:id="@+id/ycffjjl_upload_btn_upload"
+            android:layout_width="200dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:alpha="1.0"
+            android:background="@drawable/jktj_upload_btn"
+            android:gravity="center"
+            android:onClick="upload" />
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/rl_title"
+        android:layout_marginTop="2.0dip"
+        android:background="@drawable/sbackground1" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_centerHorizontal="true" >
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="60.0dip"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_xm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕妇姓名*:"
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_name"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_jddwdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="一体机业务序号*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_machineNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_jdrxm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检日期*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@id/PregnantRecheck_upload_et_antenatalCareDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="收缩压*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_SBP"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:onClick="StartMeasurement" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_qzysxm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="宫底高度*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_fundusHeight"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_qzdwdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="主诉："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_chiefComplaint"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_tnbzsbh"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕产妇专项编号："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_specialNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="胎位："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/PregnantRecheck_upload_et_foetalCirculationCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="血红蛋白值："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_hemoglobin"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="其他辅助检查："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_checkOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分类描述："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_typeDesc"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/PregnantRecheck_upload_et_referralCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊机构："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_referralOrg"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检医生代码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_checkDoctorCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检机构代码*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_checkOrgCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="下次随访日期："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.DateEditText
+                            android:id="@id/PregnantRecheck_upload_et_nextFlupDate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="0.0dip"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1.0"
+                    android:textColor="@color/text_color_black" />
+
+                <LinearLayout
+                    android:layout_width="0.0dip"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="60.0dip"
+                    android:layout_weight="2.0"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_jmgrid"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="居民个人ID*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_personId"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_jdrq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="健康一体机编号*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_machineCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_qzrq"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕周*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_gestationalWeeks"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="舒张压*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_DBP"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false"
+                            android:onClick="StartMeasurement" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="腹围*："
+                            android:textColor="@color/text_color_red"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_abdominalCircumference"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="体重："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_weight"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@id/tv_jdrdm"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="孕产妇保健手册："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_pregnantManualNo"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="胎心率："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_fetalHeartRate"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:id="@+id/PregnantRecheck_upload_et_leucocyte_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="StartMeasurement"
+                            android:text="尿蛋白："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/PregnantRecheck_upload_et_leucocyte"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="分类："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.SingleChoiceEditText
+                            android:id="@id/PregnantRecheck_upload_et_typeCode"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="指导代码："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <com.health.util.MultiChoiceEditText
+                            android:id="@id/PregnantRecheck_upload_et_guideCodes"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="指导(其他)："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_guideOther"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊原因："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_referralReason"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="转诊科室："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_referralDepartment"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检医生名称："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_checkDoctorName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:enabled="false" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="产检机构名称："
+                            android:textColor="@color/text_color_black"
+                            android:textSize="25.0sp" />
+
+                        <EditText
+                            android:id="@id/PregnantRecheck_upload_et_checkOrgName"
+                            style="@style/edit_text_style"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>
