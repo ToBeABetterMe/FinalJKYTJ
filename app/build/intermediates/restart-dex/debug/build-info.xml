@@ -4,17 +4,17 @@
     api-level="19"
     density="mdpi"
     format="7"
-    timestamp="183696395036141" >
+    timestamp="275967248690611" >
 
     <task
         name="javac"
-        duration="703" />
+        duration="3057" />
     <task
         name="instant-run-dex"
         duration="0" />
     <task
         name="instant-run-transform"
-        duration="21" />
+        duration="15" />
     <task
         name="verifier"
         duration="3" />
@@ -23,7 +23,7 @@
         location="G:\Weighing-Machine Project\FinalJKYTJ1\app\build\outputs\apk\app-debug.apk"
         type="MAIN" />
 
-    <build timestamp="183696395036141" >
+    <build timestamp="275967248690611" >
         <artifact
             location="G:\Weighing-Machine Project\FinalJKYTJ1\app\build\outputs\apk\app-debug.apk"
             type="MAIN" />

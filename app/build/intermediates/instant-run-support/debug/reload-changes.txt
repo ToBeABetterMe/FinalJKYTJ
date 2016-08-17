@@ -1,3 +1,2 @@
 CHANGED,G:\Weighing-Machine Project\FinalJKYTJ1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\android\tools\fd\runtime\AppPatchesLoaderImpl.class
-CHANGED,G:\Weighing-Machine Project\FinalJKYTJ1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\c102c\app\fragment\DemoPtrFragment$override.class
-CHANGED,G:\Weighing-Machine Project\FinalJKYTJ1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\c102c\app\fragment\MainPagerFragment$override.class
+CHANGED,G:\Weighing-Machine Project\FinalJKYTJ1\app\build\intermediates\transforms\instantRun\debug\folders\4000\5\enhanced\com\c102c\app\fragment\JKCLFragment$override.class

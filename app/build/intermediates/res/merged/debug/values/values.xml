@@ -1152,6 +1152,11 @@
         <item>1 是</item>
         <item>2 倾向是</item>
     </string-array>
+    <string-array name="jktj_titles">
+        <item>基本信息</item>
+        <item>健康指标</item>
+        <item>身体评估</item>
+    </string-array>
     <string-array name="nation">
         <item>01 汉族</item>
         <item>02 蒙古族</item>
@@ -1213,6 +1218,7 @@
     <string-array name="news_titles">
         <item>基本信息</item>
         <item>健康信息</item>
+        <item>遗传病史</item>
         <item>既往病史</item>
     </string-array>
     <string-array name="nulls"/>

@@ -24,14 +24,6 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\main_ui.xml"
     },
     {
-        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lay2.xml",
-        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\lay2.xml"
-    },
-    {
-        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lay3.xml",
-        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\lay3.xml"
-    },
-    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_doctor.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\activity_doctor.xml"
     },
@@ -40,12 +32,12 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\ywgl.xml"
     },
     {
-        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
-        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\layout_snackbar_include.xml"
-    },
-    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jktj.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jktj.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\layout_snackbar_include.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\layout_snackbar_include.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\simple_text.xml",
@@ -64,8 +56,16 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_action_menu_layout.xml"
     },
     {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_jkcl_pager.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\fragment_jkcl_pager.xml"
+    },
+    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_simple_dropdown_hint.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_simple_dropdown_hint.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jkda_lay3.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jkda_lay3.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\test.xml",
@@ -122,6 +122,10 @@
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mask.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\mask.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jktj_lay2.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jktj_lay2.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\tnbsfjl_upload.xml",
@@ -184,8 +188,16 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_template_media.xml"
     },
     {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jktj_lay1.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jktj_lay1.xml"
+    },
+    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\design_navigation_item_header.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\design\\22.2.0\\res\\layout\\design_navigation_item_header.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_jktj_pager.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\fragment_jktj_pager.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\mbgy_list.xml",
@@ -244,6 +256,14 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\sympsdialog.xml"
     },
     {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jkda_lay4.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jkda_lay4.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jkda_lay1.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jkda_lay1.xml"
+    },
+    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\abc_list_menu_item_radio.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\abc_list_menu_item_radio.xml"
     },
@@ -266,10 +286,6 @@
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\health_management_footer.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\health_management_footer.xml"
-    },
-    {
-        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_home_pager.xml",
-        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\fragment_home_pager.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\xxpx.xml",
@@ -354,6 +370,10 @@
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jzs_list.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jzs_list.xml"
+    },
+    {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_jkda_pager.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\fragment_jkda_pager.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\xcyslh_list_item.xml",
@@ -448,6 +468,10 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\exploded-aar\\com.android.support\\appcompat-v7\\22.2.0\\res\\layout\\notification_media_cancel_action.xml"
     },
     {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jkda_lay2.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jkda_lay2.xml"
+    },
+    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\measure_ecg_btn_bgl.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\measure_ecg_btn_bgl.xml"
     },
@@ -532,6 +556,10 @@
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\device_list.xml"
     },
     {
+        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\jktj_lay3.xml",
+        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\jktj_lay3.xml"
+    },
+    {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\fragment_layout.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\fragment_layout.xml"
     },
@@ -558,10 +586,6 @@
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\local_record_layout.xml",
         "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\local_record_layout.xml"
-    },
-    {
-        "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\lay1.xml",
-        "source": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\src\\main\\res\\layout\\lay1.xml"
     },
     {
         "merged": "G:\\Weighing-Machine Project\\FinalJKYTJ1\\app\\build\\intermediates\\res\\merged\\debug\\layout\\activity_login.xml",

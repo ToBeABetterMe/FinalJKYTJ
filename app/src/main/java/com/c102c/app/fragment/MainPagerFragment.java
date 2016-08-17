@@ -3,11 +3,8 @@ package com.c102c.app.fragment;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
-import android.util.Log;
 import android.util.TypedValue;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -31,6 +28,7 @@ public class MainPagerFragment extends Fragment {
     private View view1;
     private View view2;
     private View view3;
+    private View view4;
     private TextView tview1;
     private TextView tview2;
     private TextView tview3;
@@ -46,7 +44,7 @@ public class MainPagerFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.fragment_home_pager, container, false);
+        View view = inflater.inflate(R.layout.fragment_jkda_pager, container, false);
         pager = (ViewPager) view.findViewById(R.id.pager);
         tabs = (PagerSlidingTabStrip) view.findViewById(R.id.tabs);
         mheadtext =(TextView) view.findViewById(R.id.textHeadTitle);
@@ -74,17 +72,19 @@ public class MainPagerFragment extends Fragment {
 
         TITLES = getResources().getStringArray(R.array.news_titles);
         //view是我们放进viewPager里面的东西，要为它设置好布局，再放进去
-        view1= LayoutInflater.from(context).inflate(R.layout.lay1, null);
-        view2 = LayoutInflater.from(context).inflate(R.layout.lay2, null);
-        view3 = LayoutInflater.from(context).inflate(R.layout.lay3, null);
+        view1= LayoutInflater.from(context).inflate(R.layout.jkda_lay1, null);
+        view2 = LayoutInflater.from(context).inflate(R.layout.jkda_lay2, null);
+        view3 = LayoutInflater.from(context).inflate(R.layout.jkda_lay3, null);
+        view4 = LayoutInflater.from(context).inflate(R.layout.jkda_lay4, null);
 
         //为viewPager设置内容
-        tview1= (TextView)view1.findViewById(R.id.text_1);
-        tview2= (TextView)view2.findViewById(R.id.text_2);
-        tview3= (TextView)view3.findViewById(R.id.text_3);
+        //tview1= (TextView)view1.findViewById(R.id.text_1);
+        //tview2= (TextView)view2.findViewById(R.id.text_2);
+        //tview3= (TextView)view3.findViewById(R.id.text_3);
         viewContainter.add(view1);
         viewContainter.add(view2);
         viewContainter.add(view3);
+        viewContainter.add(view4);
 
       //  FragmentPagerAdapter adapter = new NewsAdapter(getChildFragmentManager());
       //  pager.setAdapter(adapter);
@@ -135,9 +135,9 @@ public class MainPagerFragment extends Fragment {
         pager.setPageMargin(pageMargin);
         tabs.setViewPager(pager);
 
-        tview1.setText("hello 1");
-        tview2.setText("hello 2");
-        tview3.setText("hello 3");
+        //tview1.setText("hello 1");
+        //tview2.setText("hello 2");
+        //tview3.setText("hello 3");
     }
 /*
     class NewsAdapter extends FragmentPagerAdapter {

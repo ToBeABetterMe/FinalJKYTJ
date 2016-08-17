@@ -3,7 +3,13 @@
     <string-array name="news_titles">
         <item>基本信息</item>
         <item>健康信息</item>
+        <item>遗传病史</item>
         <item>既往病史</item>
+    </string-array>
+    <string-array name="jktj_titles">
+        <item>基本信息</item>
+        <item>健康指标</item>
+        <item>身体评估</item>
     </string-array>
     <string-array name="schoolYear">
         <item>2000</item>

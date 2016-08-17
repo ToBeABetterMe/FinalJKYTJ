@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+    <include layout="@layout/layout_main_header" />
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="horizontal" >
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:padding="3dp" >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/jkcl_test_bp_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/xueyaxml"
+                        android:onClick="onFragmentViewClick" />
+
+                    <Button
+                        android:id="@+id/jkcl_test_xueyang_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/xueyangxml"
+                        android:onClick="onFragmentViewClick" />
+
+                    <Button
+                        android:id="@+id/jkcl_test_ewen_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/ewen_selector"
+                        android:onClick="onFragmentViewClick"
+                        android:textSize="12sp" />
+
+                    <Button
+                        android:id="@+id/test_ecg"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/measure_ecg_btn_bgl" />
+
+                    <Button
+                        android:id="@+id/test_tiwen"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/temp_button_bg"
+                        android:textSize="@dimen/text_size_2"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/jkcl_test_xuetang_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="90dp"
+                        android:background="@drawable/xuetangxml"
+                        android:onClick="onFragmentViewClick" />
+
+                    <Button
+                        android:id="@+id/test_niaosuan"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/ua_button_bg"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <Button
+                        android:id="@+id/test_zongdanguchun"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/chol_button_bg"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <Button
+                        android:id="@+id/test_baijieglu"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="30dp"
+                        android:background="@drawable/baijieglu_selector"
+                        android:textSize="@dimen/text_size_2" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="70dp"
+                    android:orientation="vertical" >
+
+                    <Button
+                        android:id="@+id/jkcl_test_niaoyifenxi_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="100dp"
+                        android:background="@drawable/urine_button_bg"
+                        android:onClick="onFragmentViewClick" />
+
+                    <Button
+                        android:id="@+id/jkcl_test_ecg12_btn"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/ecg12_selector"
+                        android:onClick="onFragmentViewClick"
+                        android:textSize="@dimen/text_size_2" />
+
+                    <Button
+                        android:id="@+id/test_baixibao"
+                        android:layout_width="260dp"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="80dp"
+                        android:background="@drawable/measure_baixibao_btn_bg"
+                        android:onClick="onFragmentViewClick"
+                        android:textSize="@dimen/text_size_2" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/bottombar"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/bottombar_height"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/bottombg"
+        android:visibility="gone" >
+
+        <Button
+            android:id="@+id/test_homebutton"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@drawable/all_homebtn"
+            android:visibility="gone">
+        </Button>
+
+        <Button
+            android:id="@+id/return_button"
+            android:layout_width="@dimen/button_width"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/all_returnbtn"
+            android:visibility="gone" >
+        </Button>
+    </RelativeLayout>
+
+</RelativeLayout>

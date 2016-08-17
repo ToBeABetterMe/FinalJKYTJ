@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.KeyEvent;
+import android.view.View;
 import android.widget.Button;
 import android.widget.RadioGroup;
 
@@ -22,6 +23,8 @@ import android.view.KeyEvent;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
+import com.c102c.app.fragment.JKCLFragment;
+import com.c102c.app.fragment.JKTJFragment;
 import com.c102c.finalJKYTJ.R;
 import com.c102c.app.fragment.BufferKnifeFragment;
 import com.c102c.app.fragment.DemoPtrFragment;
@@ -120,9 +123,17 @@ public class JKGLActivity extends BaseFragmentActivity {
     private Fragment instantFragment(int currIndex) {
         switch (currIndex) {
             case 0: return new MainPagerFragment();
-            case 1: return new DemoPtrFragment();//BufferKnifeFragment();
-            case 2: return new DemoPtrFragment();
+            case 1: return new JKTJFragment();//BufferKnifeFragment();
+            case 2: return new JKCLFragment();
             default: return null;
+        }
+    }
+    public void onFragmentViewClick(View v) {
+        Fragment fragment = getSupportFragmentManager().findFragmentByTag("CommentFragment");
+        if (fragment != null && fragment.isVisible()) {
+            if (fragment instanceof JKCLFragment) {
+                ((JKCLFragment) fragment).onViewClicked(v);
+            }
         }
     }
 /*    @Override
